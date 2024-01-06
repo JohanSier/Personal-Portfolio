@@ -6,35 +6,43 @@
     <title>Johan Sierra | Frontend Developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js" defer ></script>
 </head>
 <body>
     <main>
         <header>
             <nav id="fixed-nav">
-                <span id="logo">Johan<br>Sierra</span>
+                <a href="#top"id="logo">Johan<br>Sierra</a>
+
                 <div class="right-nav">
                     <div class="languages">
-                        <a href="#">EN</a>
+                        <a class="active-language" href="#">EN</a>
                         <a href="#">ES</a>
                     </div>
 
-                    <button><svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="none">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="#">
                         <path d="M1.40625 1.53125H18.5938M1.40625 7H18.5938M10 12.4687H18.5938" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                     </button>
+
                 </div>
+
             </nav>
 
             <section id="hero">
                 <div class="left-hero">
-                    <h1>Hi i'm Johan a Frontend<br>Developer 👋</h1>
-                    <p>I'm based in Colombia and I like to craft solid and scalable<br>frontend products with great user experiences, also I got UX design knowledge<br> so it isn't a problem working with designers</p>
+                    <h1>Hi i'm Johan a Frontend<br>Developer <span class="emoji">👋</span></h1>
+                    <p>I'm based in Colombia and I like to craft solid and scalable frontend products with great user experiences, also I got UX design knowledge so it isn't a problem working with designers</p>
 
                     <hr>
 
                     <div class="call-to-actions">
                         <button>Let's work together</button>
+                        
                         <div class="round-letters">
                             <span>View Work View Work</span>
                             <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="32" viewBox="0 0 15 32" fill="none">
@@ -248,7 +256,7 @@
             </div>
         </section>
 
-        
+
     </main>
 </body>
 </html>
