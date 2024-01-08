@@ -4,6 +4,12 @@
     /* Add additional formats here if needed */
 }
 
+@font-face {
+    font-family: "GT-America Bold";
+    src: url("../GT-America/GT-AmericaBold.otf") format("opentype");
+    /* Add additional formats here if needed */
+}
+
 
 :root{
     --primary-color: #FF5F2D;
@@ -205,6 +211,7 @@ header{
 }
 
 #banner h2{
+    font-family: "GT-America Bold";
     position: relative;
     animation: movingLetters 25s ease 2s infinite;
 }
