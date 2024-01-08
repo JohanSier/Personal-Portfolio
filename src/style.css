@@ -346,6 +346,7 @@ header{
     color: var(--white);
     display: block;
     text-align: center;
+    z-index: 100;
 }
 
 
@@ -368,7 +369,8 @@ header{
     gap:0;
     width: 100%;
 }
-.flex-skills .dev-skills{
+
+.dev-skills{
     /* position: relative; */
     display: flex;
     flex-direction: column;
@@ -380,10 +382,11 @@ header{
     background-position: center;
     background-size: cover;
     padding-bottom: 50px;
+    position: relative;
     /* z-index: 0; */
 }
 
-.flex-skills .design-skills{
+.design-skills{
     /* position: relative; */
     display: flex;
     flex-direction: column;
@@ -395,7 +398,21 @@ header{
     background-position: center;
     background-size: cover;
     padding-bottom: 50px;
+    position: relative;
     /* z-index: 0; */
+}
+
+
+/* CREATING OVERLAYS */
+.dev-skills::before, .design-skills::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(7, 7, 7, 0.55); /* RGB values for black with 45% transparency */
+    pointer-events: none; /* Allows interactions with the content behind the overlay */
 }
 
 .features{
@@ -404,6 +421,7 @@ header{
     justify-content: center;
     align-items: center;
     color: #fff;
+    z-index: 100;
 }
 .features h4{
     font-family: "Valverde", sans-serif;
