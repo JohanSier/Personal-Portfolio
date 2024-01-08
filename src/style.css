@@ -266,6 +266,8 @@ header{
 
 .one {
     grid-column: 1/3; /* This makes the element span two columns */
+    object-fit: cover;
+    object-position: 0 15%;
 }
 
 .two{
@@ -274,6 +276,8 @@ header{
 
 .three {
     grid-column: 1/4; /* This makes the element span two columns */
+    object-fit: cover;
+    object-position: 0 5%;
 }
 
 .four {
@@ -282,4 +286,5 @@ header{
 
 .five {
     grid-column: 1/6; /* This makes the element span two columns */
+   
 }
