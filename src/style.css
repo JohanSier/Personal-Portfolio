@@ -119,8 +119,24 @@ header{
     font-family: "Valverde", sans-serif;
     font-size: 45px
 }
+
+@keyframes greeting {
+    from{
+        transform: rotate(-25deg);
+    }
+    to{
+        transform: rotate(50deg);
+    }
+}
+
 .emoji{
+    display: inline-block; /* Ensures the rotation is applied properly */
     font-size: 40px;
+    animation: none;
+}
+
+.emoji:hover{
+    animation: greeting 1s ease infinite;
 }
 
 .left-hero p{
