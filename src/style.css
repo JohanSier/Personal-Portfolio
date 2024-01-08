@@ -245,14 +245,19 @@ header{
 }
 
 .ux-projects-grid{
-    margin-top: 45px;
     display: grid;
+    margin-top: 45px;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 24px;
 }
 
-.ux-projects-grid img{
+.ux-projects-grid .box{
     width: 485px;
     height: 200px;
+}
+
+.five{
+    grid-column-start: 1;
+    grid-column-end: 2;   
 }
