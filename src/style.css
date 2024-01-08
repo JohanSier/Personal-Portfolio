@@ -411,8 +411,14 @@ header{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(7, 7, 7, 0.55); /* RGB values for black with 45% transparency */
+    background-color: rgba(7, 7, 7, 0.6); /* RGB values for black with 45% transparency */
     pointer-events: none; /* Allows interactions with the content behind the overlay */
+    transition: background-color .5s ease-in-out;
+}
+
+.dev-skills:hover::before, .design-skills:hover::before{
+    transition: background-color .5s ease-in-out;
+    background-color: rgba(7, 7, 7, 0.25); /* RGB values for black with 45% transparency */
 }
 
 .features{
@@ -430,13 +436,14 @@ header{
 .features p{
     font-family: "Nunito", sans-serif;
     font-size: .8rem;
+    /* margin-bottom: 14px; */
 }
 
-.design-skills hr, .dev-skills hr{
+.design-skills .features-divider-des, .dev-skills .features-divider-dev{
     margin: auto;
-    width: 5rem;
+    width: 3rem;
     margin-top: 14px;
     background: #fff;
     border-radius: 50px;
-    border: 1px solid #fff;
+    border: .5px solid #fff;
 }
