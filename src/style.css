@@ -332,16 +332,22 @@ header{
 
 /* ------------------------------------------------- MY SKILLS SECTION STYLING ----------------------------------------------------*/
 #my-skills{
+    position: relative;
     border: 1px dashed salmon;
     margin-top: 100px;
     width: 100%;
 }
 
-.skills-heading{
-    position: relative;
+.skills-heading {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
     display: block;
     text-align: center;
 }
+
 
 .skills-heading .eyebrow-text{
     display: block;
@@ -358,9 +364,61 @@ header{
 /* FLEX ELEMENT CONTAINING THE TWO DIVS AND IMAGES */
 .flex-skills{
     display: flex;
+    flex-wrap: wrap;
     gap:0;
     width: 100%;
 }
 .flex-skills .dev-skills{
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+    height: 500px;
     background: url(../Images/tech_image.webp);
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 50px;
+    /* z-index: 0; */
+}
+
+.flex-skills .design-skills{
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+    height: 500px;
+    background: url(../Images/design_img.jpeg);
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 50px;
+    /* z-index: 0; */
+}
+
+.features{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.features h4{
+    font-family: "Valverde", sans-serif;
+    font-size: 2rem;
+}
+.features p{
+    font-family: "Nunito", sans-serif;
+    font-size: .8rem;
+}
+
+.design-skills hr, .dev-skills hr{
+    margin: auto;
+    width: 5rem;
+    margin-top: 14px;
+    background: #fff;
+    border-radius: 50px;
+    border: 1px solid #fff;
 }
