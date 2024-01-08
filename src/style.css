@@ -35,13 +35,18 @@ body{
     max-width: 1280px;
 }
 
+/* --------------------------------------------------- HEADER -------------------------------------------------------------------*/
+
+
 header{
-    overflow-x: hidden;
+    position: relative;
+    overflow: hidden;
     width: 100%;
     height: 580px;
     box-sizing: border-box;
     background-color: var(--primary-color);
 }
+
 
 /* --------------------------------------------------- NAV BAR -------------------------------------------------------------------*/
 
@@ -163,6 +168,7 @@ header{
     gap: 55px;
 }
 .call-to-actions button{
+    position: relative;
     background-color: aliceblue;
     font-family: "Nunito", sans-serif;
     font-size: 1rem;
@@ -182,14 +188,15 @@ header{
 
 .call-to-actions button:hover{
     background-color: #fffffff0;
-    transition: box-shadow .5s ease;
     box-shadow: 0px 0px 0px 0px #000;
+    transition: box-shadow .5s ease;
 }
 
 .right-hero{
     width: 450px;
     height: 60vh;
     min-height: 400px; /* Set a minimum height for the container */
+    
 }
 
 .right-hero img{
@@ -198,9 +205,20 @@ header{
     width: 100%;
     /* min-width: 400px; */
     border-radius: 50px;
+    box-shadow: 0px 5px 30px 12px rgba(30, 30, 30, 0.20);
     /* border: 2px solid #000; */
     height: 100%;
-    box-shadow: 0px 5px 30px 12px rgba(30, 30, 30, 0.20);
+}
+
+/* --------------------------------------------------- ASIDE SOCIALS -------------------------------------------------------------*/
+#hero-socials{
+    position: absolute;
+    top: 45%;
+    left: 4.8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:10px;
 }
 
 /* --------------------------------------------------- BANNER STYLING --------------------------------------------------------------*/
@@ -310,4 +328,39 @@ header{
 .five {
     grid-column: 1/6; /* This makes the element span two columns */
    
+}
+
+/* ------------------------------------------------- MY SKILLS SECTION STYLING ----------------------------------------------------*/
+#my-skills{
+    border: 1px dashed salmon;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.skills-heading{
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.skills-heading .eyebrow-text{
+    display: block;
+    font-family: "Nunito", sans-serif;
+    font-size: 1rem;
+}
+
+.skills-heading h3{
+    display: block;
+    font-family: "Valverde", sans-serif;
+    font-size: 1.8rem;
+}
+
+/* FLEX ELEMENT CONTAINING THE TWO DIVS AND IMAGES */
+.flex-skills{
+    display: flex;
+    gap:0;
+    width: 100%;
+}
+.flex-skills .dev-skills{
+    background: url(../Images/tech_image.webp);
 }
