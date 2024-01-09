@@ -15,6 +15,7 @@
     --primary-color: #FF5F2D;
     --secondary-color: #133CEB;
     --white: #fff;
+    --gray: #979797;
 }
 
 *{
@@ -536,4 +537,54 @@ header{
     font-size: 1rem;
     font-family: "Nunito", sans-serif;
     font-weight: 700;
+}
+.knowledge-level{
+    font-weight: 600;
+    color: var(--gray);
+}
+
+/* -------------------------------------------------------- CONTACT FOOTER ------------------------------------------------------*/
+#contact-footer{
+    margin-top: 75px;
+    width: 100%;
+    margin-left: 13%;
+}
+#contact-footer h3{
+    font-family: "Nunito", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+#contact-footer span{
+    display: block;
+    font-family: "Nunito", sans-serif;
+    font-size: 1.5rem;
+    margin-top: 14px;
+    margin-bottom: 24px;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+#contact-footer button{
+    position: relative;
+    background-color: aliceblue;
+    font-family: "Nunito", sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    display: flex;
+    height: 50px;
+    padding: 5px 24px;
+    text-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000;
+    box-shadow: 9px 8px 0px 0px #000;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: box-shadow .5s ease;
+    margin-bottom: 9px;
+}
+
+#contact-footer button:hover{
+    background-color: #fffffff0;
+    box-shadow: 0px 0px 0px 0px #000;
+    transition: box-shadow .5s ease;
 }
