@@ -464,8 +464,18 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 14px;
 }
 .skill-container h6{
     font-size: 1rem;
     font-weight: 800;
+}
+.skill-container img{
+    /* width: 24px; */
+}
+.black-bg{
+    display: flex;
+    background: #000;
+    border-radius: 100px;
+    padding: 8px;
 }
