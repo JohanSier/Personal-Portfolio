@@ -447,3 +447,25 @@ header{
     border-radius: 50px;
     border: .5px solid #fff;
 }
+
+/* ---------------------------------- CREATING SECTION OF SKILLS WITH LOGOS (HTML, CSS, JS) -----------------------------------------*/
+.top-skills-container, .bottom-skills-container{
+    margin: auto;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    gap: 70px;
+}
+.skill-container{
+    font-family:"Nunito", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skill-container h6{
+    font-size: 1rem;
+    font-weight: 800;
+}
