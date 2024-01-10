@@ -107,3 +107,35 @@ addHoverEffectMargin(".design-skills", ".des-title", "0", "8px", .1);
 addHoverEffectMargin(".dev-skills", ".dev-p", "0", "20px", .5);
 
 addHoverEffectMargin(".design-skills", ".des-p", "0", "20px", .5);
+
+
+//CHANGING IMAGE 
+// function changeImage() {
+//     const image = document.querySelector(".changing-image");
+//     const imageSources = [
+//         "../Images/project-2.png",
+//         "../Images/project-4.png",
+//         "../Images/project-1.jpeg",
+//         "../Images/aboutImg.jpg"
+//     ];
+    
+//     let currentIndex = 0;
+
+//     setInterval(() => {
+//         // Add a class to trigger the transition
+//         image.classList.add("fade-out");
+
+//         // Change the image source after a short delay
+//         setTimeout(() => {
+//             image.src = imageSources[currentIndex];
+//             image.style.width = "1500px"
+//             // Remove the class to reset the transition
+//             image.classList.remove("fade-out");
+
+//             // Increment the index for the next image
+//             currentIndex = (currentIndex + 1) % imageSources.length;
+//         }, 400); // Adjust the delay based on the transition duration
+//     }, 4000); // Set interval to 5000 milliseconds (5 seconds)
+// }
+
+// changeImage()
