@@ -165,19 +165,21 @@ header{
 
 .call-to-actions{
     display: flex;
+    align-items: center;
     width: 350px;
-    gap: 55px;
+    gap: 75px;
 }
-.call-to-actions button{
+
+.call-to-actions .main-cta{
     position: relative;
     background-color: aliceblue;
     font-family: "Nunito", sans-serif;
     font-size: 1rem;
     font-weight: 800;
-    display: flex;
     height: 50px;
     padding: 5px 24px;
     text-wrap: nowrap;
+    display: flex;
     justify-content: center;
     align-items: center;
     border: 2px solid #000;
@@ -187,11 +189,45 @@ header{
     transition: box-shadow .5s ease;
 }
 
-.call-to-actions button:hover{
+.call-to-actions .main-cta:hover{
     background-color: #fffffff0;
     box-shadow: 0px 0px 0px 0px #000;
     transition: box-shadow .5s ease;
 }
+
+/* CREATING ROUNDED LETTERS LINK */
+.rounded-letters{
+    cursor: pointer;
+    position: relative;
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    width: 80px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.letters-to-round{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    margin-bottom: 24px;
+}
+
+.letters-to-round span{
+    position: absolute;
+    left: -10%;
+    top: -5%;
+    font-size: .85rem;
+    transform-origin: 0 42px;
+}
+
+
+
+/* END OF ROUNDED LETTERS */
 
 .right-hero{
     width: 450px;

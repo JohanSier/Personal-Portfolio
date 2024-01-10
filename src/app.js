@@ -1,3 +1,12 @@
+// ROTATING ELEMENT
+const text = document.querySelector(".letters-to-round");
+
+text.innerHTML = text.innerText.split("").map(
+  (char, i) =>
+    `<span style="transform:rotate(${i * 17.5}deg)">${char}</span>`
+).join("");
+
+
 /* MY CODE TO TOGGLE LANGUAGE
 // const englishLink = document.querySelector(".english")
 // const spanishLink = document.querySelector(".spanish")
