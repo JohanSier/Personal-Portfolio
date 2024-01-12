@@ -10,12 +10,24 @@
     /* Add additional formats here if needed */
 }
 
-
 :root{
     --primary-color: #FF5F2D;
     --secondary-color: #133CEB;
     --white: #fff;
     --gray: #979797;
+}
+
+/* CUSTOM CURSOR FOR PROJECTS */
+#cursor{
+    position: absolute;
+    z-index: 999;
+    border: 5px solid #F2D7CF;
+    background-color: #ff5e2dc3;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    pointer-events: none;
+    display:none;
 }
 
 *{
@@ -128,10 +140,10 @@ header{
 
 @keyframes greeting {
     from{
-        transform: rotate(-25deg);
+        transform: rotate(-5deg);
     }
     to{
-        transform: rotate(50deg);
+        transform: rotate(40deg);
     }
 }
 
@@ -142,7 +154,7 @@ header{
 }
 
 .emoji:hover{
-    animation: greeting 1s ease infinite;
+    animation: greeting .5s ease-in-out infinite;
 }
 
 .left-hero p{

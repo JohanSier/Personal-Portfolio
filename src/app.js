@@ -1,3 +1,28 @@
+// CURSOR ANIMATION
+const cursor = document.getElementById("cursor");
+const projectsBoxes = document.querySelectorAll(".box"); // Use the correct selector for your boxes
+const projectsContainer = document.getElementById("projects")
+
+projectsBoxes.forEach((box) => {
+    box.addEventListener("mousemove", (e) => {
+        let x = e.pageX;
+        let y = e.pageY;
+
+        box.style.cursor = "none"
+        cursor.style.display = "block";
+        cursor.style.top = y + "px";
+        cursor.style.left = x + "px";
+        cursor.style.transition = "width 2s"
+    });
+});
+
+projectsBoxes.forEach((box) =>{
+    box.addEventListener("mouseout", () => {
+        cursor.style.display = "none";
+    });
+});
+
+
 // ROTATING ELEMENT
 const text = document.querySelector(".letters-to-round");
 
