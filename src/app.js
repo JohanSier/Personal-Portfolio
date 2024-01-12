@@ -79,7 +79,10 @@ englishLink.addEventListener("click", (e) => {
     console.log("Spanish:" + " " + activeES)
 });
 
-/*CREATING "HR" HOVER ANIMATION */
+
+
+
+/* -------------------------------------------- CREATING "HR" HOVER ANIMATION ------------------------------------------------ */
 //Getting DOM elements
 
 // Function to set width and transition for an element
@@ -115,6 +118,7 @@ const setMarginAndTransition = (element, marginBottom, duration) => {
     element.style.transition = `margin-bottom ${duration}s ease`;
 };
 
+
 // Function to add hover effects for a container and corresponding HR element
 const addHoverEffectMargin = (containerSelector, h4Selector, initialMargin, hoverMargin, duration) => {
     const container = document.querySelector(containerSelector);
@@ -143,33 +147,17 @@ addHoverEffectMargin(".dev-skills", ".dev-p", "0", "20px", .5);
 addHoverEffectMargin(".design-skills", ".des-p", "0", "20px", .5);
 
 
-//CHANGING IMAGE 
-// function changeImage() {
-//     const image = document.querySelector(".changing-image");
-//     const imageSources = [
-//         "../Images/project-2.png",
-//         "../Images/project-4.png",
-//         "../Images/project-1.jpeg",
-//         "../Images/aboutImg.jpg"
-//     ];
-    
-//     let currentIndex = 0;
+/* -------------------------------------------- CREATING SMOOTH SCROLLING EFFECT ------------------------------------------------ */
+const observer = new IntersectionObserver((entries) =>{
+    entries.forEach((entry) => {
+        console.log(entry)
+        if(entry.isIntersecting){
+            entry.target.classList.add("show")
+        } else{
+            entry.target.classList.remove("show")
+        }
+    })
+})
 
-//     setInterval(() => {
-//         // Add a class to trigger the transition
-//         image.classList.add("fade-out");
-
-//         // Change the image source after a short delay
-//         setTimeout(() => {
-//             image.src = imageSources[currentIndex];
-//             image.style.width = "1500px"
-//             // Remove the class to reset the transition
-//             image.classList.remove("fade-out");
-
-//             // Increment the index for the next image
-//             currentIndex = (currentIndex + 1) % imageSources.length;
-//         }, 400); // Adjust the delay based on the transition duration
-//     }, 4000); // Set interval to 5000 milliseconds (5 seconds)
-// }
-
-// changeImage()
+const hiddenElements = document.querySelectorAll(".hidden")
+hiddenElements.forEach((el) => observer.observe(el))
