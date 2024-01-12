@@ -510,36 +510,63 @@ header{
     margin-top: 60px;
 }
 
-/* DYNAMIC CLASSES */
-.hidden{
+/* SCROLLING EFFECT */
+
+.top-skills-container > .skill-container {
     opacity: 0;
-    transform: translateX(-100%);
-    transition: all 2s;
+    transform: translateY(-100%);
+    transition: all 1s;
 }
 
-.show{
+.top-skills-container > .skill-container.show {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
 }
 
-.top-skills-container:nth-child(2){
+.top-skills-container > .skill-container:nth-child(2) {
     transition-delay: 200ms;
 }
 
-
-.top-skills-container:nth-child(3){
+.top-skills-container > .skill-container:nth-child(3) {
     transition-delay: 400ms;
 }
 
-
-.top-skills-container:nth-child(4){
+.top-skills-container > .skill-container:nth-child(4) {
     transition-delay: 600ms;
 }
 
-
-.top-skills-container:nth-child(5){
-    transition-delay: 1000ms;
+.top-skills-container > .skill-container:nth-child(5) {
+    transition-delay: 800ms;
 }
+
+
+.bottom-skills-container > .skill-container {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 1s;
+}
+
+.bottom-skills-container > .skill-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bottom-skills-container > .skill-container:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.bottom-skills-container > .skill-container:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.bottom-skills-container > .skill-container:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+.bottom-skills-container > .skill-container:nth-child(5) {
+    transition-delay: 800ms;
+}
+/*SCROLLING EFFECT DONE*/
 
 
 .skill-container{
