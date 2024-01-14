@@ -1,27 +1,29 @@
 // CURSOR ANIMATION
-const cursor = document.getElementById("cursor");
-const projectsBoxes = document.querySelectorAll(".box"); // Use the correct selector for your boxes
-const projectsContainer = document.getElementById("projects")
+const cursorElement = document.getElementById("cursor");
+const uxProjectsBoxes = document.querySelectorAll(".box");
+const frontendProjectBoxes = document.querySelectorAll(".boxF");
+const projectsContainer = document.getElementById("projects");
 
-projectsBoxes.forEach((box) => {
-    box.addEventListener("mousemove", (e) => {
-        let x = e.pageX;
-        let y = e.pageY;
+function handleCursorEvents(projectType) {
+    projectType.forEach((box) => {
+        box.addEventListener("mousemove", (e) => {
+            let x = e.pageX;
+            let y = e.pageY;
 
-        box.style.cursor = "none"
-        cursor.style.display = "block";
-        cursor.style.top = y + "px";
-        cursor.style.left = x + "px";
-        cursor.style.transition = "width 2s"
+            box.style.cursor = "none";
+            cursorElement.style.display = "block";
+            cursorElement.style.top = y + "px";
+            cursorElement.style.left = x + "px";
+        });
+
+        box.addEventListener("mouseout", () => {
+            cursorElement.style.display = "none";
+        });
     });
-});
+}
 
-projectsBoxes.forEach((box) =>{
-    box.addEventListener("mouseout", () => {
-        cursor.style.display = "none";
-    });
-});
-
+handleCursorEvents(uxProjectsBoxes);
+handleCursorEvents(frontendProjectBoxes);
 
 // ROTATING ELEMENT
 const text = document.querySelector(".letters-to-round");
@@ -162,12 +164,23 @@ const observer = new IntersectionObserver((entries) =>{
 const hiddenElements = document.querySelectorAll(".hidden")
 hiddenElements.forEach((el) => observer.observe(el))
 
-/* -------------------------------------------- CREATING DROPDOWN ------------------------------------------------ */
+
+/* -------------------------------------------- CREATING DROPDOWN -------------------------------------------------------- */
+/* --------------------------------------  AND GRID HIDDEN OR NOT HIDDEN ------------------------------------------------ */
+
+// -------- DROPDOWN Variables
 const dropBtn = document.querySelector(".dropbtn");
 const dropDownContent = document.querySelector(".dropdown-content");
 const frontendBtn = document.querySelector(".frontend")
 const uxBtn = document.querySelector(".ux")
+// -------- GRID Variables
+const uxGrid = document.querySelector(".ux-projects-grid")
+const frontendGrid = document.querySelector(".frontend-projects-grid")
 
+function showGrid(gridHide, gridShow){
+    gridHide.style.display = "none"
+    gridShow.style.display = "grid"
+}
 
 dropBtn.addEventListener("click", () => {
     dropDownContent.classList.toggle("show-dropdown");
@@ -179,23 +192,27 @@ dropBtn.addEventListener("click", () => {
     }
 });
 
-//THIS SHOWS TO THE USER THE CURRENT OPTION
+//Current Option
 frontendBtn.addEventListener("click", () => {
     dropBtn.textContent = "Frontend Dev"
+
     uxBtn.classList.remove("default")
     frontendBtn.classList.add("default")
+
+    showGrid(uxGrid, frontendGrid)
 });
 frontendBtn.addEventListener("mouseover", ()=>{
     uxBtn.classList.remove("default")
 })
 
-//THIS SHOWS TO THE USER THE CURRENT OPTION
+//Current Option
 uxBtn.addEventListener("click", () => {
     dropBtn.textContent = "UX Design"
     if(frontendBtn.classList.contains("default")){
         frontendBtn.classList.remove("default")
         uxBtn.classList.add("default")
     }
+    showGrid(frontendGrid, uxGrid)
 });
 uxBtn.addEventListener("mouseover", ()=>{
     frontendBtn.classList.remove("default")
@@ -214,3 +231,4 @@ window.onclick = function (event) {
         }
     }
 };
+
