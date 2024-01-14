@@ -161,3 +161,38 @@ const observer = new IntersectionObserver((entries) =>{
 
 const hiddenElements = document.querySelectorAll(".hidden")
 hiddenElements.forEach((el) => observer.observe(el))
+
+/* -------------------------------------------- CREATING DROPDOWN ------------------------------------------------ */
+const dropBtn = document.querySelector(".dropbtn");
+const dropDownContent = document.querySelector(".dropdown-content");
+const frontendBtn = document.querySelector(".frontend")
+const uxBtn = document.querySelector(".ux")
+
+
+dropBtn.addEventListener("click", () => {
+    dropDownContent.classList.toggle("show-dropdown");
+});
+
+frontendBtn.addEventListener("click", () => {
+    dropBtn.textContent = "Frontend Dev"
+    // dropDownContent.classList.toggle("show-dropdown");
+});
+
+uxBtn.addEventListener("click", () => {
+    dropBtn.textContent = "UX Design"
+    // dropDownContent.classList.toggle("show-dropdown");
+});
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show-dropdown')) {
+                openDropdown.classList.remove('show-dropdown');
+            }
+        }
+    }
+};
