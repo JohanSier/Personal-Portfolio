@@ -184,11 +184,11 @@ function showGrid(gridHide, gridShow){
 
 dropBtn.addEventListener("click", () => {
     dropDownContent.classList.toggle("show-dropdown");
-    if(!frontendBtn.classList.contains("default")){
-        uxBtn.classList.add("default")
+    if(!uxBtn.classList.contains("default")){
+        frontendBtn.classList.add("default")
     }
     else{
-        uxBtn.classList.remove("default")
+        frontendBtn.classList.remove("default")
     }
 });
 
@@ -208,7 +208,7 @@ frontendBtn.addEventListener("mouseover", ()=>{
 //Current Option
 uxBtn.addEventListener("click", () => {
     dropBtn.textContent = "UX Design"
-    if(frontendBtn.classList.contains("default")){
+    if(!frontendBtn.classList.contains("default")){
         frontendBtn.classList.remove("default")
         uxBtn.classList.add("default")
     }

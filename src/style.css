@@ -408,7 +408,7 @@ header{
 /* UX GRID STYLES */
 
 .ux-projects-grid{
-    display: grid;
+    display: none;
     margin-top: 45px;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -453,7 +453,7 @@ header{
 
 /* FRONTEND GRID STYLES */
 .frontend-projects-grid{
-    display: none;
+    display: grid;
     margin-top: 45px;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
