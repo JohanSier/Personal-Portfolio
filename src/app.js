@@ -171,17 +171,35 @@ const uxBtn = document.querySelector(".ux")
 
 dropBtn.addEventListener("click", () => {
     dropDownContent.classList.toggle("show-dropdown");
+    if(!frontendBtn.classList.contains("default")){
+        uxBtn.classList.add("default")
+    }
+    else{
+        uxBtn.classList.remove("default")
+    }
 });
 
+//THIS SHOWS TO THE USER THE CURRENT OPTION
 frontendBtn.addEventListener("click", () => {
     dropBtn.textContent = "Frontend Dev"
-    // dropDownContent.classList.toggle("show-dropdown");
+    uxBtn.classList.remove("default")
+    frontendBtn.classList.add("default")
 });
+frontendBtn.addEventListener("mouseover", ()=>{
+    uxBtn.classList.remove("default")
+})
 
+//THIS SHOWS TO THE USER THE CURRENT OPTION
 uxBtn.addEventListener("click", () => {
     dropBtn.textContent = "UX Design"
-    // dropDownContent.classList.toggle("show-dropdown");
+    if(frontendBtn.classList.contains("default")){
+        frontendBtn.classList.remove("default")
+        uxBtn.classList.add("default")
+    }
 });
+uxBtn.addEventListener("mouseover", ()=>{
+    frontendBtn.classList.remove("default")
+})
 
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function (event) {
