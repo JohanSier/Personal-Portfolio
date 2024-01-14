@@ -184,7 +184,7 @@ header{
 
 .call-to-actions .main-cta{
     position: relative;
-    background-color: aliceblue;
+    background-color: #fff;
     font-family: "Nunito", sans-serif;
     font-size: 1rem;
     font-weight: 800;
@@ -268,6 +268,10 @@ header{
     flex-direction: column;
     justify-content: center;
     gap:10px;
+}
+
+#hero-socials a svg:hover{
+    opacity: .65;
 }
 
 /* --------------------------------------------------- BANNER STYLING --------------------------------------------------------------*/
@@ -741,7 +745,7 @@ header{
 
 #contact-footer button{
     position: relative;
-    background-color: aliceblue;
+    background-color: #fff;
     font-family: "Nunito", sans-serif;
     font-size: 1rem;
     font-weight: 800;
@@ -760,7 +764,7 @@ header{
 }
 
 #contact-footer button:hover{
-    background-color: #fffffff0;
+    background-color: #ff5e2d1f;
     box-shadow: 0px 0px 0px 0px #000;
     transition: box-shadow .5s ease;
 }
