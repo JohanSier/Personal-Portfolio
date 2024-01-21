@@ -244,7 +244,6 @@ const menuToggleBtn = document.querySelector(".menu-open-toggle");
 const hiddenMenu = document.getElementById("hidden-menu");
 
 menuToggleBtn.addEventListener("click", () => {
-    const computedOpacity = window.getComputedStyle(hiddenMenu).getPropertyValue("opacity");
     const computedDisplay = window.getComputedStyle(hiddenMenu).getPropertyValue("display")
     hiddenMenu.style.display = computedDisplay === "none" ? "flex" : "none";
 
@@ -265,6 +264,7 @@ menuToggleBtn.addEventListener("click", () => {
 
         // Remove the 'show' class to apply the transition
         hiddenMenu.classList.remove("show");
+        menuImages.setAttribute("src", "../Images/base-image.jpg");
     }
 });
 
@@ -278,15 +278,16 @@ const contactLink = document.querySelector(".menu_link-contact");
 
 function setImage(link, src) {
     link.addEventListener("mouseenter", () => {
-        menuImages.setAttribute("src", src);
+        menuImages.style.opacity = 0; // Set opacity to 0 before changing the image
+        setTimeout(() => {
+            menuImages.setAttribute("src", src);
+            menuImages.style.opacity = 1; // Fade in by setting opacity to 1
+        }, 300); // Adjust the duration (in milliseconds) based on your preference
     });
-    link.addEventListener("mouseout", () => {
-        menuImages.setAttribute("src", "../Images/base-image.jpg");
-    });
-    
 }
 
 setImage(projectLink, "../Images/projects.webp");
 setImage(skillsLink, "../Images/skills.webp");
 setImage(aboutLink, "../Images/about.png");
 setImage(contactLink, "../Images/contact.png");
+
