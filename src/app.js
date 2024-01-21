@@ -269,3 +269,24 @@ menuToggleBtn.addEventListener("click", () => {
 });
 
 
+//Creating the link hover interaction (that changes the image)
+const menuImages = document.getElementById("menu-images");
+const projectLink = document.querySelector(".menu_link-projects");
+const skillsLink = document.querySelector(".menu_link-skills");
+const aboutLink = document.querySelector(".menu_link-about");
+const contactLink = document.querySelector(".menu_link-contact");
+
+function setImage(link, src) {
+    link.addEventListener("mouseenter", () => {
+        menuImages.setAttribute("src", src);
+    });
+    link.addEventListener("mouseout", () => {
+        menuImages.setAttribute("src", "../Images/base-image.jpg");
+    });
+    
+}
+
+setImage(projectLink, "../Images/projects.webp");
+setImage(skillsLink, "../Images/skills.webp");
+setImage(aboutLink, "../Images/about.png");
+setImage(contactLink, "../Images/contact.png");
