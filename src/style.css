@@ -236,6 +236,7 @@ header{
     border-top-right-radius:35px ;
     border-bottom-right-radius:35px ;
     transition: opacity 1.2s ease;
+    border: 2px solid #fff;
 }
 
 

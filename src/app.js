@@ -283,6 +283,7 @@ function setImage(link, src) {
             menuImages.setAttribute("src", src);
             menuImages.style.opacity = 1; // Fade in by setting opacity to 1
         }, 300); // Adjust the duration (in milliseconds) based on your preference
+        
     });
 }
 
