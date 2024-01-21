@@ -148,7 +148,7 @@ header{
     z-index: 1000;
     overflow: hidden;
     padding-bottom: 24px;
-    transition: opacity 0.3s ease, top 0.5s ease, display 0.5s ease; /* Smooth transition over 0.3s for both opacity and top */
+    transition: opacity 0.3s ease, top 0.5s ease;/* Smooth transition over 0.3s for both opacity and top */
     opacity: 0;
 }
 
