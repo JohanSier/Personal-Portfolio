@@ -26,15 +26,6 @@
         enableCursorAnimation(uxProjectsBoxes);
         enableCursorAnimation(frontendProjectBoxes);
 
-    // ROTATING ELEMENT
-    const text = document.querySelector(".letters-to-round");
-
-    text.innerHTML = text.innerText.split("").map(
-    (char, i) =>
-        `<span style="transform:rotate(${i * 17.5}deg)">${char}</span>`
-    ).join("");
-
-
     /* MY CODE TO TOGGLE LANGUAGE
     // const englishLink = document.querySelector(".english")
     // const spanishLink = document.querySelector(".spanish")
@@ -233,11 +224,6 @@
         }
     };
 
-
- })();
-
-
-
 /* ----------------------------------------------  CREATING BURGUER MENU LOGIC  ---------------------------------------------------- */
 // Assuming you have a button that toggles the menu with id="menu-toggle"
 const menuToggleBtn = document.querySelector(".menu-open-toggle");
@@ -317,3 +303,30 @@ setImage(aboutLink, "../Images/about.png");
 setImage(contactLink, "../Images/contact.png");
 
 
+/* ---------------------------------------------  CREATING RESUME BUTTON LOGIC  ---------------------------------------------------- */
+
+const resumeBtn = document.querySelector(".resume-btn")
+const resumeText = document.querySelector(".resume-text")
+const resumeSvg = document.querySelector(".resume-svg")
+
+function showResumeText(element){
+    element.addEventListener("mouseover", ()=>{
+        resumeBtn.style.width = "150px"
+        resumeText.style.visibility = "visible"
+    })
+}
+
+function hideResumeText(element){
+    element.addEventListener("mouseleave", ()=>{
+        resumeBtn.style.width = "43px"
+        resumeText.style.visibility = "hidden"
+    })
+}
+
+showResumeText(resumeBtn)
+showResumeText(resumeSvg)
+hideResumeText(resumeBtn)
+
+
+
+})();
