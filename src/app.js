@@ -261,20 +261,45 @@ menuToggleBtn.addEventListener("click", () => {
         // Hide the menu with a smooth transition
         menuToggleBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="#"> <path d="M1.40625 1.53125H18.5938M1.40625 7H18.5938M10 12.4687H18.5938" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </svg>`;
         document.body.style.overflow = "auto";
-
+        
         // Remove the 'show' class to apply the transition
         hiddenMenu.classList.remove("show");
         menuImages.setAttribute("src", "../Images/base-image.jpg");
     }
 });
 
+// Function to handle smooth scrolling
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({
+            behavior: 'smooth'
+        });
 
-//Creating the link hover interaction (that changes the image)
+        // Check if the menu is open, and if so, hide it
+        const computedDisplay = window.getComputedStyle(hiddenMenu).getPropertyValue("display");
+        if (computedDisplay !== "none") {
+            menuToggleBtn.click(); // Simulate a click on the toggle button to close the menu
+        }
+    }
+}
+
+// Creating the link hover interaction (that changes the image)
 const menuImages = document.getElementById("menu-images");
 const projectLink = document.querySelector(".menu_link-projects");
 const skillsLink = document.querySelector(".menu_link-skills");
 const aboutLink = document.querySelector(".menu_link-about");
 const contactLink = document.querySelector(".menu_link-contact");
+
+// Adding smooth scrolling event listeners to menu links
+projectLink.addEventListener("click", () => {
+    scrollToSection("banner");
+});
+
+skillsLink.addEventListener("click", () => {
+    scrollToSection("my-skills");
+});
+
 
 function setImage(link, src) {
     link.addEventListener("mouseenter", () => {
@@ -283,7 +308,6 @@ function setImage(link, src) {
             menuImages.setAttribute("src", src);
             menuImages.style.opacity = 1; // Fade in by setting opacity to 1
         }, 300); // Adjust the duration (in milliseconds) based on your preference
-        
     });
 }
 
@@ -291,4 +315,5 @@ setImage(projectLink, "../Images/projects.webp");
 setImage(skillsLink, "../Images/skills.webp");
 setImage(aboutLink, "../Images/about.png");
 setImage(contactLink, "../Images/contact.png");
+
 
