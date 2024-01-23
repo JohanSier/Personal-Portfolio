@@ -272,6 +272,8 @@ function scrollToSection(sectionId) {
 
 // Creating the link hover interaction (that changes the image)
 const menuImages = document.getElementById("menu-images");
+
+const homeLink = document.querySelector(".menu_link-home")
 const projectLink = document.querySelector(".menu_link-projects");
 const skillsLink = document.querySelector(".menu_link-skills");
 const aboutLink = document.querySelector(".menu_link-about");
@@ -298,11 +300,11 @@ function setImage(link, src) {
     });
 }
 
+setImage(homeLink, "../Images/base-image.jpg")
 setImage(projectLink, "../Images/projects.webp");
 setImage(skillsLink, "../Images/skills.webp");
 setImage(aboutLink, "../Images/about.png");
 setImage(contactLink, "../Images/contact.png");
-
 
 /* ---------------------------------------------  CREATING RESUME BUTTON LOGIC  ---------------------------------------------------- */
 

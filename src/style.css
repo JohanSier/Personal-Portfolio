@@ -165,7 +165,6 @@ header{
 
 }
 
-
 .flex-container{
     display: flex;
     margin: auto;
@@ -177,8 +176,8 @@ header{
 .menu-left-content{
     width: 55%;
     background: #fff;
-    padding-top: 200px;
-    padding-left: 110px;
+    padding-top: 150px;
+    padding-left: 11%;
     border-top-left-radius:35px ;
     border-bottom-left-radius:35px ;
 }
@@ -188,7 +187,7 @@ header{
     flex-direction: column;
     gap: 20px;
     list-style: none;
-    margin-bottom: 65px;
+    margin-bottom: 35px;
 }
 
 .menu-left-content ul li a{
