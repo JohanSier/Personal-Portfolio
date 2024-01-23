@@ -136,7 +136,8 @@ header{
 /* ----------------------------------------------------- HIDDEN MENU -----------------------------------------------------------------*/
 
 #hidden-menu {
-    display: none;
+    visibility: hidden;
+    display: flex;
     position: fixed;
     align-items: center;
     justify-content: center;
@@ -148,13 +149,13 @@ header{
     z-index: 1000;
     overflow: hidden;
     padding-bottom: 24px;
-    transition: opacity 0.3s ease, top 0.5s ease;/* Smooth transition over 0.3s for both opacity and top */
+    transition: opacity 0.3s ease, visibility 0.5s ease;/* Smooth transition over 0.3s for both opacity and top */
     opacity: 0;
 }
 
 #hidden-menu.show {
     opacity: 1;
-    transition: opacity 0.3s ease, top 0.5s ease; /* Smooth transition over 0.3s for both opacity and top */
+    transition: opacity 0.3s ease, visibility 0.5s ease; /* Smooth transition over 0.3s for both opacity and top */
 
 }
 
