@@ -311,7 +311,7 @@ const resumeSvg = document.querySelector(".resume-svg")
 
 function showResumeText(element){
     element.addEventListener("mouseover", ()=>{
-        resumeBtn.style.width = "150px"
+        resumeBtn.style.width = "140px"
         resumeText.style.visibility = "visible"
     })
 }

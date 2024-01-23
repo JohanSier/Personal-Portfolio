@@ -128,7 +128,7 @@ header{
 
 .menu-open-toggle:hover{
     box-shadow: none;
-    opacity: .95;
+    background-color: #ffffffcf;
     transition: box-shadow .3s ease;
 }
 
@@ -326,8 +326,9 @@ header{
     transition: box-shadow .5s ease;
 }
 
-/* CREATING RESUME BUTTON */
+/* CREATING RESUME BUTTON AND TOOLTIP */
 .resume-btn{
+    display: inline-block;
     position: relative;
     text-align: center;
     height: 40px;
@@ -365,6 +366,49 @@ header{
     margin-left: 14px;
     transition: visibility .3s ease;
 }
+/* Show the tooltip text when you mouse over the tooltip container */
+/* .resume-btn:hover .tooltiptext {
+  visibility: visible;
+} */
+/* Tooltip container */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.resume-btn:hover + .tooltiptext {
+    visibility: visible;
+}
+
+.tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgba(0, 0, 0, 0.718) transparent;
+  }
+
+/* Tooltip text */
+.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0.718);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    /* Position the tooltip text */
+    position: absolute;
+    top: -125px;
+    transform: translateY(600%);
+    left: 10%;
+}
+  
+  
 /* END OF ROUNDED LETTERS */
 
 .right-hero{
