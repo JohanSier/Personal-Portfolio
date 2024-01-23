@@ -71,18 +71,24 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 16px 0; /* Top and bottom padding is 18px, left and right padding is 0 */
-    padding-top: 2.5rem;
+    padding-top: 2.8rem;
     border-radius: 50px;
     outline: none;
 }
 
 #logo{
-    text-decoration: none;
-    font-family: "Valverde";
-    color: var(--white);
-    font-size: 1.3rem;
-    letter-spacing: .04rem;
-    line-height: 1.1rem;
+    position: relative;
+}
+
+#logo img{
+    position: absolute;
+    top: -20px;
+    left: -5px;
+    width: 145px;
+    height: 40px;
+    flex-shrink: 0;
+    object-fit: cover;
+    object-position: center;
 }
 
 #logo:hover{
@@ -354,7 +360,9 @@ header{
     position: absolute;
     left: 10px;
     top: 10px;
+    z-index: 500;
 }
+
 .resume-btn:hover{
     background-color: #ffffffcf;
 }
@@ -366,6 +374,7 @@ header{
     padding-top: 12px;
     margin-left: 14px;
     transition: visibility .3s ease;
+    z-index: 100;
 }
 /* Show the tooltip text when you mouse over the tooltip container */
 /* .resume-btn:hover .tooltiptext {

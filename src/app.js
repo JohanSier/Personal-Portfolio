@@ -319,8 +319,11 @@ function showResumeText(element){
 
 function hideResumeText(element){
     element.addEventListener("mouseleave", ()=>{
-        resumeBtn.style.width = "43px"
         resumeText.style.visibility = "hidden"
+        //Fixes overposition bug
+        setTimeout(()=>{
+            resumeBtn.style.width = "43px"
+        }, 200)
     })
 }
 
