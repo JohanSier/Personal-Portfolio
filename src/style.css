@@ -957,7 +957,7 @@ header{
     opacity: .78;
 }
 
-#contact-footer button{
+#contact-footer .footer-btn{
     position: relative;
     background-color: #fff;
     font-family: "Nunito", sans-serif;
@@ -977,14 +977,30 @@ header{
     margin-bottom: 9px;
 }
 
+
+.footer-btn.animation {
+    animation: focusAnimation 1s ease 6;
+}
+
+@keyframes focusAnimation {
+    0%, 100% {
+        transform: translateY(0);
+        box-shadow: 9px 8px 0px 0px #000;
+    }
+    50% {
+        transform: translateY(-8px);
+        box-shadow: 9px 13px 0px 0px #000;
+    }
+}
+
 #contact-footer button:hover{
-    background-color: #ff5e2d1f;
+    background-color: #f3e8e5;
     box-shadow: 0px 0px 0px 0px #000;
     transition: box-shadow .5s ease;
 }
 
 /* -------------------------------------------------------- FOOTER ------------------------------------------------------*/
-footer{
+#footer{
     margin-top: 62px;
     display: flex;
     align-items: center;

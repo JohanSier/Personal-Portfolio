@@ -287,6 +287,7 @@ skillsLink.addEventListener("click", () => {
 });
 
 
+
 function setImage(link, src) {
     link.addEventListener("mouseenter", () => {
         menuImages.style.opacity = 0; // Set opacity to 0 before changing the image
@@ -328,5 +329,16 @@ showResumeText(resumeSvg)
 hideResumeText(resumeBtn)
 
 
+//SCROLL EFFECT FOR THE MAIN CTA
+const mainCta = document.querySelector(".main-cta")
+const footerBtn = document.querySelector(".footer-btn")
+
+mainCta.addEventListener("click", ()=>{
+    scrollToSection("footer")
+    setInterval(() => {
+        footerBtn.classList.add("animation") 
+    }, 500);
+    footerBtn.classList.remove("animation") 
+})
 
 })();
