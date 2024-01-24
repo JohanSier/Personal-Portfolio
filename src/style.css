@@ -1013,12 +1013,27 @@ header{
     margin-top: 62px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 13.5%;
     font-family: "Nunito", sans-serif;
-    font-size: .8rem;
+    font-size: .85rem;
     width: 100%;
-    height: 50px;
+    height: 55px;
     background: #1E1E1E;
     color: var(--white);
     text-align: center;
+}
+
+.footer-socials{
+    display: flex;
+    gap: 8px;
+}
+
+#footer .footer-socials a svg{
+    width: 20px;
+    height: 20px;
+}
+
+#footer .footer-socials a svg:hover{
+    opacity: .65;
 }
