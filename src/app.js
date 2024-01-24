@@ -1,9 +1,8 @@
- (function(){
-     // CURSOR ANIMATION
+document.addEventListener("DOMContentLoaded", function() {
+    // CURSOR ANIMATION
     const cursorElement = document.getElementById("cursor");
     const uxProjectsBoxes = document.querySelectorAll(".box");
     const frontendProjectBoxes = document.querySelectorAll(".boxF");
-    const projectsContainer = document.getElementById("projects");
 
     function enableCursorAnimation(projectType) {
         projectType.forEach((box) => {
@@ -279,7 +278,7 @@ const skillsLink = document.querySelector(".menu_link-skills");
 const aboutLink = document.querySelector(".menu_link-about");
 const contactLink = document.querySelector(".menu_link-contact");
 
-// Adding smooth scrolling event listeners to menu links
+///Adding smooth scrolling event listeners to menu links
 projectLink.addEventListener("click", () => {
     scrollToSection("banner");
 });
@@ -345,5 +344,4 @@ mainCta.addEventListener("click", ()=>{
     }, 500);
     footerBtn.classList.remove("animation") 
 })
-
-})();
+});

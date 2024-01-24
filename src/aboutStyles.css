@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "Valverde";
+    src: url("../Valverde-Font/Valverde-CondensedSemibold.otf") format("opentype");
+    /* Add additional formats here if needed */
+}
+
+@font-face {
+    font-family: "GT-America Bold";
+    src: url("../GT-America/GT-AmericaBold.otf") format("opentype");
+    /* Add additional formats here if needed */
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
