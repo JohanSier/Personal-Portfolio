@@ -14,3 +14,255 @@ body{
     background-color: var(--primary-color);
 }
 
+/* -------------------------------------------------- FIXED NAV ----------------------------------------------------------- */
+
+#fixed-nav{
+    width: 75%;
+    margin: auto;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0; /* Top and bottom padding is 18px, left and right padding is 0 */
+    padding-top: 2.8rem;
+    border-radius: 50px;
+    outline: none;
+}
+
+
+/* HAMBURGUER BUTTON */
+.menu-open-toggle{
+    z-index: 2000;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: 2px solid #000;
+    box-shadow: 5px 3px 0px 0px #000;
+    cursor: pointer;
+    transition: box-shadow .3s ease;
+}
+
+.menu-open-toggle:hover{
+    box-shadow: none;
+    background-color: #ffffffcf;
+    transition: box-shadow .3s ease;
+}
+
+
+/* ----------------------------------------------------- HIDDEN MENU -----------------------------------------------------------------*/
+
+#hidden-menu {
+    visibility: hidden;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--primary-color);
+    z-index: 1000;
+    overflow: hidden;
+    padding-bottom: 24px;
+    transition: opacity 0.3s ease, visibility 0.5s ease;/* Smooth transition over 0.3s for both opacity and top */
+    opacity: 0;
+}
+
+#hidden-menu.show {
+    opacity: 1;
+    transition: opacity 0.3s ease, visibility 0.5s ease; /* Smooth transition over 0.3s for both opacity and top */
+
+}
+
+.flex-container{
+    display: flex;
+    margin: auto;
+    width: 75%;
+    height: 88%;
+    border-radius: 35px;
+}
+
+.menu-left-content{
+    width: 55%;
+    background: #fff;
+    padding-top: 250px;
+    padding-left: 11%;
+    border-top-left-radius:35px ;
+    border-bottom-left-radius:35px ;
+}
+
+.menu-left-content ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    margin-bottom: 35px;
+}
+
+.menu-left-content ul li a{
+    font-family: "Valverde", sans-serif;
+    font-size: 2.4rem;
+    text-decoration: none;
+    color: #454242;
+    text-wrap: nowrap;
+    transition: all .3s ease;
+
+}
+
+.menu-left-content ul li a:hover{
+    color: var(--primary-color);
+    transition: all .3s ease;
+    letter-spacing: 1.5px;
+}
+
+
+.menu_link-about.active{
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.language-selection{
+    display: flex;
+    font-family: "Nunito", sans-serif;
+    gap: 1rem;
+}
+
+.language-selection span{
+    font-size: 1rem;
+    font-weight: 800;
+    color: #000;
+}
+
+.languages-menu{
+    display: flex;
+    gap: .5rem;
+}
+
+.languages-menu a{
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.languages-menu .active{
+    font-weight: black;
+    color: var(--primary-color);
+}
+
+#menu-images{
+    width: 45%;
+    height: auto;
+    object-fit: cover;
+    border-top-right-radius:35px ;
+    border-bottom-right-radius:35px ;
+    transition: opacity 1.2s ease;
+    border: 2px solid #fff;
+}
+
+/* ----------------------------------------------------------- ABOUT HERO ------------------------------------------------------------ */
+
+.about-hero{
+    font-family: "Nunito", sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+    color: #fff;
+}
+
+
+.about_left-p span{
+    font-family: "Valverde", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.about_left-p p{
+    font-size: .95rem;
+    font-weight: 600;
+    width: 300px;
+    margin-top: 24px;
+}
+
+.about-hero img{
+    flex-grow: 5;
+    width: 400px;
+    height: 350px;
+    margin: 0 50px;
+    border-radius: 300px;
+}
+
+.about_right-p p{
+    font-weight: 600;
+    font-size: .95rem;
+    width: 300px;
+    margin-top: 24px;
+}
+
+header hr{
+    margin: auto;
+    margin-block: 60px;
+    width: 150px;
+    height: 3px;
+    background: #fff;
+    border: none;
+    border-radius: 50px;
+}
+
+/* ----------------------------------------------------- HOBBIES CONTAINER -------------------------------------------------------- */
+.hobbies-container {
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 130px;
+    width: 76%;
+    height: 500px;
+}
+
+.hobbies-container h3 {
+    font-family: "Valverde", sans-serif;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 32px;
+}
+
+.hobbies_flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    gap: 38px; /* Adjust the gap between items as needed */
+}
+
+.hobbies_hobbie {
+    flex: 1;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    color: #fff;
+}
+
+.hobbies_hobbie img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    border: 2px solid #FFF;
+    box-shadow: 10px 10px 0px 0px #FFF;
+    margin-bottom: 30px;
+}
+
+.hobbies_hobbie h4{
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+}
+
+.hobbies_hobbie p{
+    font-weight: 300;
+    font-size: 1rem;
+}

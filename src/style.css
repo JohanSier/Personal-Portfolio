@@ -36,16 +36,12 @@
     box-sizing: border-box;
 }
 
-main{
-    width: 100%;
-    overflow-x: hidden;
-}
-
 body{
     font-size: 16px; /* or another base font size */
     overflow-x: hidden;
     width: 100%;
     max-width: 1280px;
+    margin: auto;
 }
 
 /* --------------------------------------------------- HEADER -------------------------------------------------------------------*/
@@ -206,6 +202,10 @@ header{
     letter-spacing: 1.5px;
 }
 
+.menu_link-home.active{
+    color: var(--primary-color);
+    text-decoration: underline;
+}
 
 .language-selection{
     display: flex;
@@ -381,6 +381,7 @@ header{
 } */
 /* Tooltip container */
 .tooltip-container {
+    font-family: "GT-America", sans-serif;
     position: relative;
     display: inline-block;
 }
@@ -947,7 +948,9 @@ header{
     margin-top: 75px;
     width: 100%;
     margin-left: 13%;
+    margin-bottom: 60px;
 }
+
 #contact-footer h3{
     font-family: "Nunito", sans-serif;
     font-size: 2.5rem;
@@ -1010,7 +1013,10 @@ header{
 
 /* -------------------------------------------------------- FOOTER ------------------------------------------------------*/
 #footer{
-    margin-top: 62px;
+    position: relative;
+    z-index: 400;
+    /* margin-top: 62px; */
+    bottom: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
