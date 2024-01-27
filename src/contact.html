@@ -1,11 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Johan Sierra</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Johan Sierra, Jr Frontend Developer. Passionate about crafting solid and scalable frontend products with great user experiences.">
+        <meta name="keywords" content="frontend, developer, web development, UX design, Colombia">
     
-</body>
-</html>
+        <title>About | Johan Sierra</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="contact.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+        <script type="module" src="./aboutBurger.js" defer ></script>
+    </head>
+    <body>
+        <header>
+                <nav id="fixed-nav">
+                    <a href="index.html" id="logo">
+                        <img src="../Images/logo.png" alt="johan's-portfolio-logo">
+                    </a>
+    
+                    <div class="right-nav">
+                        <div class="languages">
+                            <a class="english active-language" href="#">EN</a>
+                            <a class="spanish" href="#">ES</a>
+                        </div>
+    
+                        <button class="menu-open-toggle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="#">
+                            <path d="M1.40625 1.53125H18.5938M1.40625 7H18.5938M10 12.4687H18.5938" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </button>
+                    </div>
+                </nav>
+    
+                <div id="hidden-menu">
+                    <div class="flex-container">
+                        <div class="menu-left-content">
+                            <ul>
+                                <li><a class="menu_link-home"href="index.html">Home</a></li>
+                                <li><a class="menu_link-about"href="about.html">More About Me</a></li>
+                                <li><a class="menu_link-contact active"href="contact.html">Contact Form</a></li>
+                            </ul>
+    
+                            <div class="language-selection">
+                                <span>Languages:</span>
+                                <div class="languages-menu">
+                                    <a class="active" href="#">EN</a>
+                                    <a href="#">ES</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <img id="menu-images" src="../Images/contact.png" alt="decoration picture">
+                    </div>                 
+                </div>
+
+                <section id="contact-container">
+                    <h3>Ready to work together? Fill out the form<br>below or email: <span>johanstcortes@gmail.com</span></h3>
+                    <form action="">
+                        <input type="text" name="name" placeholder="FULL NAME *" required>
+                        <input type="email" name="email" id="email" placeholder="EMAIL *" required>
+                        <input type="text" name="subject" placeholder="SUBJECT *" required>
+                        <textarea name="" required cols="30" rows="10" placeholder="MESSAGE *"></textarea>
+                        <button name="submit" type="submit" >SEND MESSAGE</button>
+                    </form>
+                </section>
+            </header>
+
+            <footer id="footer">
+                <div class="footer-socials">
+                    <a href="https://github.com/JohanSier" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                            <g clip-path="url(#clip0_305_285)">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5416 0C5.96308 0 0.64502 5.35727 0.64502 11.9849C0.64502 17.2828 4.05248 21.7673 8.77954 23.3545C9.37055 23.4738 9.58703 23.0966 9.58703 22.7793C9.58703 22.5015 9.56755 21.5491 9.56755 20.5568C6.25822 21.2713 5.56908 19.1281 5.56908 19.1281C5.03725 17.7391 4.24924 17.3821 4.24924 17.3821C3.1661 16.6479 4.32814 16.6479 4.32814 16.6479C5.52963 16.7273 6.16008 17.8782 6.16008 17.8782C7.2235 19.7035 8.93709 19.1878 9.62648 18.8702C9.72486 18.0964 10.0402 17.5606 10.375 17.2631C7.73561 16.9852 4.95859 15.9535 4.95859 11.3499C4.95859 10.0402 5.43101 8.96879 6.17956 8.1355C6.06146 7.83792 5.64773 6.60746 6.29791 4.96059C6.29791 4.96059 7.3024 4.64305 9.5673 6.19081C10.537 5.92846 11.537 5.79501 12.5416 5.79388C13.546 5.79388 14.57 5.93293 15.5156 6.19081C17.7807 4.64305 18.7852 4.96059 18.7852 4.96059C19.4354 6.60746 19.0214 7.83792 18.9033 8.1355C19.6716 8.96879 20.1245 10.0402 20.1245 11.3499C20.1245 15.9535 17.3475 16.9652 14.6884 17.2631C15.1218 17.64 15.4958 18.3542 15.4958 19.4853C15.4958 21.0925 15.4764 22.3824 15.4764 22.7791C15.4764 23.0966 15.6931 23.4738 16.2839 23.3548C21.0109 21.7671 24.4184 17.2828 24.4184 11.9849C24.4379 5.35727 19.1003 0 12.5416 0Z" fill="white" fill-opacity="0.9"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_305_285">
+                                    <rect width="23.7734" height="23.7734" fill="white" transform="translate(0.64502)"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/johan-steven-sierra-cortes-5b2a5022b/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                            <g clip-path="url(#clip0_305_291)">
+                              <path d="M22.6586 0.584961H2.40017C1.42973 0.584961 0.64502 1.3511 0.64502 2.29832V22.6404C0.64502 23.5876 1.42973 24.3584 2.40017 24.3584H22.6586C23.6291 24.3584 24.4184 23.5876 24.4184 22.645V2.29832C24.4184 1.3511 23.6291 0.584961 22.6586 0.584961ZM7.69811 20.8434H4.16924V9.49535H7.69811V20.8434ZM5.93368 7.94915C4.80072 7.94915 3.886 7.03443 3.886 5.90612C3.886 4.77781 4.80072 3.86309 5.93368 3.86309C7.06198 3.86309 7.9767 4.77781 7.9767 5.90612C7.9767 7.02978 7.06198 7.94915 5.93368 7.94915ZM20.9035 20.8434H17.3793V15.3273C17.3793 14.0132 17.3561 12.3184 15.5452 12.3184C13.7111 12.3184 13.4325 13.7532 13.4325 15.2344V20.8434H9.91294V9.49535H13.2932V11.0462H13.3396C13.8086 10.1547 14.9601 9.21211 16.6735 9.21211C20.2442 9.21211 20.9035 11.5616 20.9035 14.6168V20.8434Z" fill="white" fill-opacity="0.9"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_305_291">
+                                <rect width="23.7734" height="23.7734" fill="white" transform="translate(0.64502 0.584961)"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+    
+                    <a href="mailto:johanstcortes@gmail.com?subject=Hello%20Johan&body=Dear%20Johan,%0D%0A%0D%0AI%20am%20interested%20in%20your%20portfolio.%20Let's%20connect!%0D%0A%0D%0ARegards,%0D%0A[Your Name]" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="18" viewBox="0 0 23 18" fill="none">
+                            <path d="M20.4465 0.169922H2.61645C1.39064 0.169922 0.398839 1.17286 0.398839 2.39868L0.387695 15.7712C0.387695 16.997 1.39064 18 2.61645 18H20.4465C21.6723 18 22.6753 16.997 22.6753 15.7712V2.39868C22.6753 1.17286 21.6723 0.169922 20.4465 0.169922ZM20.4465 4.62744L11.5315 10.1993L2.61645 4.62744V2.39868L11.5315 7.97057L20.4465 2.39868V4.62744Z" fill="white" fill-opacity="0.9"/>
+                        </svg>
+                    </a>
+                </div>
+                <span>© Johan Sierra. 2024.</span>
+            </footer>
+    </body>

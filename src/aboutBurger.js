@@ -3,6 +3,14 @@
 const menuToggleBtn = document.querySelector(".menu-open-toggle");
 const hiddenMenu = document.getElementById("hidden-menu");
 
+
+// Creating the link hover interaction (that changes the image)
+const menuImages = document.getElementById("menu-images");
+
+const homeLink = document.querySelector(".menu_link-home")
+const aboutLink = document.querySelector(".menu_link-about");
+const contactLink = document.querySelector(".menu_link-contact");
+
 menuToggleBtn.addEventListener("click", () => {
     const computedVisibility = window.getComputedStyle(hiddenMenu).getPropertyValue("visibility")
     hiddenMenu.style.visibility = computedVisibility === "hidden" ? "visible" : "hidden";
@@ -17,6 +25,7 @@ menuToggleBtn.addEventListener("click", () => {
 
         // Add the 'show' class to apply the transition
         hiddenMenu.classList.add("show");
+
     } else {
         // Hide the menu with a smooth transition
         menuToggleBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="#"> <path d="M1.40625 1.53125H18.5938M1.40625 7H18.5938M10 12.4687H18.5938" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </svg>`;
@@ -24,7 +33,11 @@ menuToggleBtn.addEventListener("click", () => {
         
         // Remove the 'show' class to apply the transition
         hiddenMenu.classList.remove("show");
-        menuImages.setAttribute("src", "../Images/base-image.jpg");
+        
+        if (menuImages.getAttribute("src") !== "../Images/about.png") {
+            // Change the 'src' attribute
+            menuImages.setAttribute("src", "../Images/contact.png");
+        }
     }
 });
 
@@ -44,24 +57,6 @@ function scrollToSection(sectionId) {
     }
 }
 
-// Creating the link hover interaction (that changes the image)
-const menuImages = document.getElementById("menu-images");
-
-const homeLink = document.querySelector(".menu_link-home")
-const projectLink = document.querySelector(".menu_link-projects");
-const skillsLink = document.querySelector(".menu_link-skills");
-const aboutLink = document.querySelector(".menu_link-about");
-const contactLink = document.querySelector(".menu_link-contact");
-
-///Adding smooth scrolling event listeners to menu links
-projectLink.addEventListener("click", () => {
-    scrollToSection("banner");
-});
-
-skillsLink.addEventListener("click", () => {
-    scrollToSection("my-skills");
-});
-
 
 
 function setImage(link, src) {
@@ -75,8 +70,6 @@ function setImage(link, src) {
 }
 
 setImage(homeLink, "../Images/base-image.jpg")
-setImage(projectLink, "../Images/projects.webp");
-setImage(skillsLink, "../Images/skills.webp");
 setImage(aboutLink, "../Images/about.png");
 setImage(contactLink, "../Images/contact.png");
 

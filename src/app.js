@@ -227,6 +227,15 @@ document.addEventListener("DOMContentLoaded", function() {
 // Assuming you have a button that toggles the menu with id="menu-toggle"
 const menuToggleBtn = document.querySelector(".menu-open-toggle");
 const hiddenMenu = document.getElementById("hidden-menu");
+// Creating the link hover interaction (that changes the image)
+const menuImages = document.getElementById("menu-images");
+
+const homeLink = document.querySelector(".menu_link-home")
+const projectLink = document.querySelector(".menu_link-projects");
+const skillsLink = document.querySelector(".menu_link-skills");
+const aboutLink = document.querySelector(".menu_link-about");
+const contactLink = document.querySelector(".menu_link-contact");
+
 
 menuToggleBtn.addEventListener("click", () => {
     const computedVisibility = window.getComputedStyle(hiddenMenu).getPropertyValue("visibility")
@@ -249,6 +258,7 @@ menuToggleBtn.addEventListener("click", () => {
         
         // Remove the 'show' class to apply the transition
         hiddenMenu.classList.remove("show");
+        
         menuImages.setAttribute("src", "../Images/base-image.jpg");
     }
 });
@@ -268,15 +278,6 @@ function scrollToSection(sectionId) {
         }
     }
 }
-
-// Creating the link hover interaction (that changes the image)
-const menuImages = document.getElementById("menu-images");
-
-const homeLink = document.querySelector(".menu_link-home")
-const projectLink = document.querySelector(".menu_link-projects");
-const skillsLink = document.querySelector(".menu_link-skills");
-const aboutLink = document.querySelector(".menu_link-about");
-const contactLink = document.querySelector(".menu_link-contact");
 
 ///Adding smooth scrolling event listeners to menu links
 projectLink.addEventListener("click", () => {

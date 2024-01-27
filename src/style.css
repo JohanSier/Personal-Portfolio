@@ -1013,10 +1013,9 @@ header{
 
 /* -------------------------------------------------------- FOOTER ------------------------------------------------------*/
 #footer{
+    /* margin-top: 62px; */
     position: relative;
     z-index: 400;
-    /* margin-top: 62px; */
-    bottom: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
