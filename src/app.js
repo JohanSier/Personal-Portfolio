@@ -336,7 +336,7 @@ hideResumeText(resumeBtn)
 
 //SCROLL EFFECT FOR THE MAIN CTA
 const mainCta = document.querySelector(".main-cta")
-const footerBtn = document.querySelector(".footer-btn")
+const footerBtn = document.querySelector(".footer_btn")
 
 mainCta.addEventListener("click", ()=>{
     scrollToSection("footer")
