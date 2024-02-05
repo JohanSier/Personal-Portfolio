@@ -31,8 +31,8 @@ const fixedNav = document.getElementById("fixed-nav")
 const heroSection = document.getElementById("hero")
 
 window.addEventListener("scroll",()=>{
-    fixedNav.classList.toggle("scrollEffect", window.scrollY>0)
-    if(window.scrollY>0){
+    fixedNav.classList.toggle("scrollEffect", window.scrollY> 10)
+    if(window.scrollY> 10){
         heroSection.style.marginTop = "138px"
     }
     else{
@@ -226,43 +226,40 @@ window.addEventListener("scroll",()=>{
 
 /* ----------------------------------------------  CREATING BURGUER MENU LOGIC  ---------------------------------------------------- */
 // Assuming you have a button that toggles the menu with id="menu-toggle"
-const menuToggleBtn = document.querySelector(".menu-open-toggle");
+const openMenuBtn = document.querySelector(".nav_open-btn");
 const hiddenMenu = document.getElementById("hidden-menu");
+const closeMenuBtn = document.querySelector(".hiddenMenu_close-btn");
 // Creating the link hover interaction (that changes the image)
 const menuImages = document.getElementById("menu-images");
 
-const homeLink = document.querySelector(".menu_link-home")
+const homeLink = document.querySelector(".menu_link-home");
 const projectLink = document.querySelector(".menu_link-projects");
 const skillsLink = document.querySelector(".menu_link-skills");
 const aboutLink = document.querySelector(".menu_link-about");
 const contactLink = document.querySelector(".menu_link-contact");
 
+openMenuBtn.addEventListener("click", () => {
+    hiddenMenu.style.visibility = "visible";
 
-menuToggleBtn.addEventListener("click", () => {
-    const computedVisibility = window.getComputedStyle(hiddenMenu).getPropertyValue("visibility")
-    hiddenMenu.style.visibility = computedVisibility === "hidden" ? "visible" : "hidden";
-    fixedNav.classList.remove("scrollEffect")
+    //Remove the scroll effect that makes the background black while scrolling
+    fixedNav.classList.remove("scrollEffect");
+    heroSection.style.marginTop = "auto";
 
-    if (computedVisibility === "hidden") {
-        // Show the menu with a smooth transition
-        menuToggleBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.49982 9.4139L13.1568 15.0709C13.3454 15.2531 13.598 15.3539 13.8602 15.3516C14.1224 15.3493 14.3732 15.2441 14.5586 15.0587C14.744 14.8733 14.8492 14.6225 14.8515 14.3603C14.8538 14.0981 14.753 13.8455 14.5708 13.6569L8.91382 7.9999L14.5708 2.34291C14.753 2.1543 14.8538 1.9017 14.8515 1.6395C14.8492 1.37731 14.744 1.12649 14.5586 0.941087C14.3732 0.755679 14.1224 0.65051 13.8602 0.648231C13.598 0.645953 13.3454 0.746747 13.1568 0.928905L7.49982 6.58591L1.84282 0.928905C1.65337 0.75125 1.40224 0.654271 1.14255 0.658487C0.882871 0.662704 0.635015 0.767787 0.451433 0.951499C0.26785 1.13521 0.162943 1.38314 0.15891 1.64283C0.154877 1.90251 0.252034 2.15358 0.429823 2.34291L6.08582 7.9999L0.428823 13.6569C0.333313 13.7492 0.257131 13.8595 0.204722 13.9815C0.152313 14.1035 0.124727 14.2347 0.123573 14.3675C0.122419 14.5003 0.147721 14.632 0.198001 14.7549C0.248282 14.8778 0.322535 14.9894 0.416428 15.0833C0.510321 15.1772 0.621973 15.2514 0.744869 15.3017C0.867766 15.352 0.999445 15.3773 1.13222 15.3762C1.265 15.375 1.39622 15.3474 1.51823 15.295C1.64023 15.2426 1.75058 15.1664 1.84282 15.0709L7.49982 9.4139Z" fill="black"/>
-      </svg>`;
-        document.body.style.overflow = "hidden";
+    //To make the body tag overflow Y and X not visible
+    document.body.style.overflow = "hidden";
+    hiddenMenu.classList.add("show");
+    menuImages.setAttribute("src", "../Images/base-image.jpg");
+});
 
-        // Add the 'show' class to apply the transition
-        hiddenMenu.classList.add("show");
-    } else {
-        // Hide the menu with a smooth transition
-        menuToggleBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="#"> <path d="M1.40625 1.53125H18.5938M1.40625 7H18.5938M10 12.4687H18.5938" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </svg>`;
-        document.body.style.overflowX = "hidden";
-        document.body.style.overflowY = "auto";
-        
-        // Remove the 'show' class to apply the transition
-        hiddenMenu.classList.remove("show");
-        
-        menuImages.setAttribute("src", "../Images/base-image.jpg");
-    }
+closeMenuBtn.addEventListener("click", () => {
+    hiddenMenu.style.visibility = "hidden";
+    fixedNav.classList.remove("scrollEffect");
+    document.body.style.overflowX = "hidden";
+    document.body.style.overflowY = "scroll";
+
+    //Readjust the margin of the section that is modified by the fixed nav
+    heroSection.style.marginTop = "24px";
+    hiddenMenu.classList.remove("show");
 });
 
 // Function to handle smooth scrolling
@@ -273,23 +270,36 @@ function scrollToSection(sectionId) {
             behavior: 'smooth'
         });
 
-        // Check if the menu is open, and if so, hide it
-        const computedVisibility = window.getComputedStyle(hiddenMenu).getPropertyValue("visibility");
-        if (computedVisibility !== "hidden") {
-            menuToggleBtn.click(); // Simulate a click on the toggle button to close the menu
+        if (hiddenMenu.style.visibility = "visible") {
+            closeMenuBtn.click(); // Simulate a click on the toggle button to close the menu
         }
     }
 }
 
 ///Adding smooth scrolling event listeners to menu links
-projectLink.addEventListener("click", () => {
+projectLink.addEventListener("click", (event) => {
+    event.preventDefault();
     scrollToSection("banner");
+    // Toggle the class after the scrolling is complete
+    setTimeout(() => {
+        fixedNav.classList.toggle("scrollEffect");
+    }, 1000);
+    setTimeout(() => {
+        fixedNav.classList.add("scrollEffect");
+    }, 4000);
 });
 
-skillsLink.addEventListener("click", () => {
+skillsLink.addEventListener("click", (event) => {
+    event.preventDefault();
     scrollToSection("my-skills");
+    // Toggle the class after the scrolling is complete
+    setTimeout(() => {
+        fixedNav.classList.toggle("scrollEffect");
+    }, 1000);
+    setTimeout(() => {
+        fixedNav.classList.add("scrollEffect");
+    }, 4000);
 });
-
 
 
 function setImage(link, src) {

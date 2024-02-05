@@ -125,8 +125,8 @@ header{
 }
 
 /* HAMBURGUER BUTTON */
-.menu-open-toggle{
-    z-index: 3000;
+.nav_open-btn{
+    z-index: 500;
     display: flex;
     width: 40px;
     height: 40px;
@@ -139,7 +139,7 @@ header{
     transition: box-shadow .3s ease;
 }
 
-.menu-open-toggle:hover{
+.nav_open-btn:hover{
     box-shadow: none;
     background-color: #ffffffcf;
     transition: box-shadow .3s ease;
@@ -254,6 +254,29 @@ header{
     border-bottom-right-radius:35px ;
     transition: opacity 1.2s ease;
     border: 2px solid #fff;
+}
+
+.hiddenMenu_close-btn{
+    position: absolute;
+    top: 7.3%;
+    right: 12.5%;
+    z-index: 3000;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: 2px solid #000;
+    box-shadow: 5px 3px 0px 0px #000000;
+    cursor: pointer;
+    transition: box-shadow .3s ease;
+}
+
+.hiddenMenu_close-btn:hover{
+    box-shadow: none;
+    background-color: #ffffffcf;
+    transition: box-shadow .3s ease;
 }
 
 
