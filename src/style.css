@@ -51,7 +51,7 @@ header{
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 580px;
+    height: 600px;
     box-sizing: border-box;
     background-color: var(--primary-color);
 }
@@ -62,14 +62,25 @@ header{
 #fixed-nav{
     width: 75%;
     margin: auto;
-    /* border: 1px solid black; */
+    margin-top: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px 0; /* Top and bottom padding is 18px, left and right padding is 0 */
-    padding-top: 2.8rem;
     border-radius: 50px;
     outline: none;
+}
+
+#fixed-nav.scrollEffect{
+    position: fixed;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(34,32,33, 0.9);
+    padding-right: 32px;
+    padding-left: 32px;
+    z-index: 1500;
+    transition: background 1s;
 }
 
 #logo{
@@ -115,7 +126,7 @@ header{
 
 /* HAMBURGUER BUTTON */
 .menu-open-toggle{
-    z-index: 2000;
+    z-index: 3000;
     display: flex;
     width: 40px;
     height: 40px;
@@ -254,7 +265,7 @@ header{
     width: 75%;
     height: 400px;
     color: var(--white);
-    margin-top: 24px;
+    margin-top: 24px; /* Default value: 24px It will change to 138px - 150px when scrolling the page */
     gap: 60px;
 }
 

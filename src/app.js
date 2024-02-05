@@ -25,25 +25,26 @@ document.addEventListener("DOMContentLoaded", function() {
         enableCursorAnimation(uxProjectsBoxes);
         enableCursorAnimation(frontendProjectBoxes);
 
-    /* MY CODE TO TOGGLE LANGUAGE
-    // const englishLink = document.querySelector(".english")
-    // const spanishLink = document.querySelector(".spanish")
+// -------------------------------------------- CREATING FIXED NAVIGATION INTERACTION -----------------------------------------------
 
-    // spanishLink.addEventListener("click", (e) =>{
-    //     if(spanishLink.getAttribute("active-language") == null ){
-    //         spanishLink.setAttribute("class", "active-language")
-    //         englishLink.removeAttribute("class", "active-language")
-    //     }
-    // })
+const fixedNav = document.getElementById("fixed-nav")
+const heroSection = document.getElementById("hero")
 
-    // englishLink.addEventListener("click", (e) =>{
-    //     if(englishLink.getAttribute("active-language") == null ){
-    //         englishLink.setAttribute("class", "active-language")
-    //         spanishLink.removeAttribute("class", "active-language")
-    //     }
-    // })*/
+window.addEventListener("scroll",()=>{
+    fixedNav.classList.toggle("scrollEffect", window.scrollY>0)
+    if(window.scrollY>0){
+        heroSection.style.marginTop = "138px"
+    }
+    else{
+        heroSection.style.marginTop = "24px"
+    }
+})
 
-    // CHATGPT CODE TO TOGGLE LANGUAGE
+
+
+
+// ------------------------------------------------- CHATGPT CODE TO TOGGLE LANGUAGE -----------------------------------------------
+ 
     const englishLink = document.querySelector(".english");
     const spanishLink = document.querySelector(".spanish");
     let activeES = false;
@@ -240,7 +241,7 @@ const contactLink = document.querySelector(".menu_link-contact");
 menuToggleBtn.addEventListener("click", () => {
     const computedVisibility = window.getComputedStyle(hiddenMenu).getPropertyValue("visibility")
     hiddenMenu.style.visibility = computedVisibility === "hidden" ? "visible" : "hidden";
-
+    fixedNav.classList.remove("scrollEffect")
 
     if (computedVisibility === "hidden") {
         // Show the menu with a smooth transition
@@ -254,7 +255,8 @@ menuToggleBtn.addEventListener("click", () => {
     } else {
         // Hide the menu with a smooth transition
         menuToggleBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="#"> <path d="M1.40625 1.53125H18.5938M1.40625 7H18.5938M10 12.4687H18.5938" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </svg>`;
-        document.body.style.overflow = "auto";
+        document.body.style.overflowX = "hidden";
+        document.body.style.overflowY = "auto";
         
         // Remove the 'show' class to apply the transition
         hiddenMenu.classList.remove("show");
