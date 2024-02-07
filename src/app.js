@@ -41,8 +41,6 @@ window.addEventListener("scroll",()=>{
 })
 
 
-
-
 // ------------------------------------------------- CHATGPT CODE TO TOGGLE LANGUAGE -----------------------------------------------
  
     const englishLink = document.querySelector(".english");
