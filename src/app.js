@@ -232,6 +232,8 @@ const closeMenuBtn = document.querySelector(".hiddenMenu_close-btn");
 // Creating the link hover interaction (that changes the image)
 const menuImages = document.getElementById("menu-images");
 
+const logo = document.getElementById("logo")
+
 const homeLink = document.querySelector(".menu_link-home");
 const projectLink = document.querySelector(".menu_link-projects");
 const skillsLink = document.querySelector(".menu_link-skills");
@@ -299,6 +301,13 @@ skillsLink.addEventListener("click", (event) => {
     setTimeout(() => {
         fixedNav.classList.add("scrollEffect");
     }, 4000);
+});
+
+logo.addEventListener("click", (event) => {
+    event.preventDefault();
+    document.body.scrollIntoView({
+        behavior: 'smooth'
+    });
 });
 
 
