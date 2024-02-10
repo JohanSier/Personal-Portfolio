@@ -902,7 +902,7 @@ header{
     gap: 14px;
     margin-bottom: 54px;
 }
-.skill-container h6{
+.skill-container span{
     font-size: 1rem;
     font-weight: 800;
 }
