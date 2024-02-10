@@ -248,7 +248,7 @@ openMenuBtn.addEventListener("click", () => {
     //To make the body tag overflow Y and X not visible
     document.body.style.overflow = "hidden";
     hiddenMenu.classList.add("show");
-    menuImages.setAttribute("src", "../Images/base-image.jpg");
+    menuImages.setAttribute("src", "../Images/base-image.avif");
 });
 
 closeMenuBtn.addEventListener("click", () => {
