@@ -13,8 +13,8 @@
 }
 
 :root{
-    --primary-color: #FF5F2D;
-    --secondary-color: #133CEB;
+    --primary-color: #133CEB;
+    --secondary-color: #1e1e1e;
     --white: #fff;
     --gray: #979797;
 }
@@ -23,8 +23,8 @@
 #cursor{
     position: absolute;
     z-index: 999;
-    border: 5px solid #F2D7CF;
-    background-color: #ff5e2dc3;
+    border: 5px solid #cfd8f2;
+    background-color: var(--primary-color);
     width: 20px;
     height: 20px;
     border-radius: 50px;
@@ -39,7 +39,6 @@
 }
 
 body{
-    font-size: 16px; /* or another base font size */
     overflow-x: hidden;
     width: 100%;
     max-width: 1280px;
@@ -553,7 +552,7 @@ header{
 }
 
 .dropbtn:hover{
-    box-shadow: 0px 5px 30px 12px rgba(255, 72, 0, 0.146);
+    box-shadow: 0px 5px 30px 12px rgba(0, 17, 255, 0.146);
 }
 
 .dropdown .dropbtn{
@@ -1083,4 +1082,11 @@ header{
 
 #footer .footer-socials a svg:hover{
     opacity: .65;
+}
+
+/* ----------------------------------------------------------- CREATING MEDIAQUERIES RESPONSIVE DESIGN  ------------------------------------------------------*/
+@media screen and (max-width: 560px){
+    body{
+        font-size: 14px;
+    }
 }
