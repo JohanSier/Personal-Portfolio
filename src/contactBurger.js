@@ -78,11 +78,11 @@ function setImage(link, src) {
     });
 }
 
-setImage(homeLink, "../Images/base-image.jpg")
+setImage(homeLink, "../Images/base-image.avif")
 setImage(projectLink, "../Images/projects.webp");
 setImage(skillsLink, "../Images/skills.webp");
-setImage(aboutLink, "../Images/about.png");
-setImage(contactLink, "../Images/contact.png");
+setImage(aboutLink, "../Images/about.avif");
+setImage(contactLink, "../Images/contact.avif");
 
 
 // ---------------------------------------------- CHATGPT CODE TO TOGGLE LANGUAGE -------------------------------------------------- //
