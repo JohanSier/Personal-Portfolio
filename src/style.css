@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
 
 @font-face {
-    font-family: "Valverde";
+    font-family: "Valverde", "Helvetica", sans-serif;
     src: url("../Valverde-Font/Valverde-CondensedSemibold.otf") format("opentype");
     /* Add additional formats here if needed */
 }
 
 @font-face {
-    font-family: "GT-America Bold";
+    font-family: "GT-America Bold", sans-serif;
     src: url("../GT-America/GT-AmericaBold.otf") format("opentype");
     /* Add additional formats here if needed */
 }

@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "Valverde";
+    font-family: "Valverde", "Helvetica", sans-serif;
     src: url("../Valverde-Font/Valverde-CondensedSemibold.otf") format("opentype");
     /* Add additional formats here if needed */
 }
