@@ -1150,7 +1150,7 @@ header{
 @media screen and (max-width: 480px){
     #hero .left-hero h1{
         font-size: 2em;
-        width: 340px;
+        width: 300px;
     }
 
     .left-hero p{
