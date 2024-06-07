@@ -301,6 +301,7 @@ header{
 #hero .left-hero h1{
     font-family: "Valverde", sans-serif;
     font-size: 2.8em; 
+    text-wrap: no-wrap;
 }
 
 @keyframes greeting {
@@ -1113,17 +1114,17 @@ header{
     #hero{
         font-size: 16px;
     }
-/* 
+
     .left-hero{
         margin-top: 52px; // By removing the right section it went up so this code fixed it
-    } */
+    } 
 
     .left-hero p{
         width: 400px;
     }
 
     #banner{
-        font-size: 20px;
+        font-size: 1.4rem;
     }
 
     #hero-socials{
@@ -1140,31 +1141,10 @@ header{
 
     #hero .left-hero h1{
         font-size: 2.7em;
+        text-wrap: no-wrap;
     }
-/* 
-    .call-to-actions{
-        flex-direction: column;
-        align-items: flex-start;
-    } */
-    /* .resume-btn{
-        height: 50px;
-        width: 63px;
-        /* gap:10px; */
-        /* padding-top: 5px; */
-        
-        /* .resume-btn .resume-svg{
-            position: absolute;
-            left: 12px;
-            top: 18px;
-            transform: scale(1.15);
-        }
-        
-        .resume-btn .resume-text{
-            top: -2px;
-            transition: visibility .3s ease;
-            z-index: 100;
-        } */ 
-   
+
+    
 }
 
 @media screen and (max-width: 480px){
@@ -1178,4 +1158,26 @@ header{
         width: 300px;
     }
 
+    .call-to-actions{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .resume-btn{
+        height: 50px;
+        width: 150px;
+        gap:10px;
+        padding-top: 5px; 
+    }
+
+    .resume-btn .resume-text{
+        visibility: visible;
+        font-size: 1rem;
+    }
+    
+    .resume-btn .resume-svg{
+        position: absolute;
+        left: 18px;
+        top: 18px;
+    }
 }
