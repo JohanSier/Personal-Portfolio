@@ -1236,11 +1236,14 @@ header{
         flex-direction: column;
         justify-content: center;
         width: 80%;
-        padding: 20px;
+        padding-top: 50px;
+        padding-bottom: 0;
+        border-radius: 24px;
     }
 
     .bottom-skills-container{
-        margin-top: 24px;
+        margin-top: 32px;
+        margin-bottom: 50px;
     }
 
     .top-skills-container{
