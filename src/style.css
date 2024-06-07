@@ -1116,7 +1116,7 @@ header{
     }
 
     .left-hero{
-        margin-top: 52px; // By removing the right section it went up so this code fixed it
+        margin-top: 52px; /* By removing the right section it went up so this code fixed it */
     } 
 
     .left-hero p{
@@ -1150,7 +1150,7 @@ header{
 @media screen and (max-width: 480px){
     #hero .left-hero h1{
         font-size: 2em;
-        text-wrap: wrap; 
+        width: 100px;
     }
 
     .left-hero p{
