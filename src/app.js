@@ -365,3 +365,28 @@ mainCta.addEventListener("click", ()=>{
     footerBtn.classList.remove("animation") 
 })
 });
+
+/* ---------------------------- CREATING LOGIC TO DISABLE SOME MOUSE EVENTS ON MOBILE ---------------------------------------------------- */
+
+function disableMouseEvents() {
+    if ('ontouchstart' in window || navigator.maxTouchPoints) {
+        document.addEventListener('mouseover', function(e) {
+            e.stopPropagation();
+        }, true);
+
+        document.addEventListener('mouseout', function(e) {
+            e.stopPropagation();
+        }, true);
+
+        document.addEventListener('mouseenter', function(e) {
+            e.stopPropagation();
+        }, true);
+
+        document.addEventListener('mouseleave', function(e) {
+            e.stopPropagation();
+        }, true);
+    }
+}
+
+// Call the function to disable mouse events on touch devices
+disableMouseEvents();

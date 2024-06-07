@@ -1192,11 +1192,6 @@ header{
 }
 
 @media screen and (max-width: 480px){
-    body{
-        pointer-events: none;
-    }
-    
-
     /*Responsive Hero*/
     #hero .left-hero h1{
         font-size: 2em;
