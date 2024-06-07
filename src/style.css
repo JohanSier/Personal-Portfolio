@@ -300,8 +300,7 @@ header{
 
 #hero .left-hero h1{
     font-family: "Valverde", sans-serif;
-    font-size: 2.8em;
-    text-wrap: nowrap; 
+    font-size: 2.8em; 
 }
 
 @keyframes greeting {
@@ -375,12 +374,12 @@ header{
 
 /* CREATING RESUME BUTTON AND TOOLTIP */
 .resume-btn{
-    display: inline-block;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     height: 40px;
     width: 43px;
-    gap:10px;
     padding-top: 5px;
     background-color: #fff;
     border: 2px solid #000;
@@ -398,8 +397,8 @@ header{
 
 .resume-btn .resume-svg{
     position: absolute;
-    left: 10px;
-    top: 10px;
+    left: 12px;
+    top: 12px;
     z-index: 500;
 }
 
@@ -410,9 +409,7 @@ header{
 .resume-btn .resume-text{
     visibility: hidden;
     position: relative;
-    top: 2px;
-    padding-top: 12px;
-    margin-left: 14px;
+    top: -2px;
     transition: visibility .3s ease;
     z-index: 100;
 }
@@ -1116,6 +1113,10 @@ header{
     #hero{
         font-size: 16px;
     }
+/* 
+    .left-hero{
+        margin-top: 52px; // By removing the right section it went up so this code fixed it
+    } */
 
     .left-hero p{
         width: 400px;
@@ -1136,5 +1137,45 @@ header{
     .right-hero img{
         height: 50%;
     }
-    
+
+    #hero .left-hero h1{
+        font-size: 2.7em;
+    }
+/* 
+    .call-to-actions{
+        flex-direction: column;
+        align-items: flex-start;
+    } */
+    /* .resume-btn{
+        height: 50px;
+        width: 63px;
+        /* gap:10px; */
+        /* padding-top: 5px; */
+        
+        /* .resume-btn .resume-svg{
+            position: absolute;
+            left: 12px;
+            top: 18px;
+            transform: scale(1.15);
+        }
+        
+        .resume-btn .resume-text{
+            top: -2px;
+            transition: visibility .3s ease;
+            z-index: 100;
+        } */ 
+   
+}
+
+@media screen and (max-width: 480px){
+    #hero .left-hero h1{
+        font-size: 2em;
+        text-wrap: wrap; 
+    }
+
+    .left-hero p{
+        font-size: 1em;
+        width: 300px;
+    }
+
 }
