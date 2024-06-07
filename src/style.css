@@ -1189,6 +1189,22 @@ header{
         width: 100%;
         height: 400px;
     }
+
+    /* Responsive Styling About Me */
+    #about-me{
+        flex-direction: column;
+    }
+    
+    #about-me .changing-image {
+        width: 100%;
+    }
+
+    /* CONTACT STYLING */
+    #contact-footer h3{
+        font-size: 2em;
+        margin-right: 24px;
+    }
+
 }
 
 @media screen and (max-width: 480px){
