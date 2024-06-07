@@ -1228,6 +1228,37 @@ header{
         top: 18px;
     }
 
-    /*Responsive My SKills*/
-
+    
+    /* Responsive Skills Features */
+    .top-skills-container, .bottom-skills-container{
+        border: 20px solid red;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+    }
+    .top-skills-container{
+        margin-top: 60px;
+    }
+    
+    .skill-container span{
+        display: block;
+    }
+    
+    .skill-container:nth-child(3){
+        border: 2px solid red;
+        margin-top:-90px;
+    }
+    .skill-container:nth-child(2){
+        border: 2px solid blue;
+        margin-top:-90px;
+    }
+    .skill-container:nth-child(4){
+        border: 2px solid green;
+        margin-top:-90px;
+    }
+    .skill-container:nth-child(5){
+        border: 2px solid yellow;
+        margin-top:-90px;
+    }
 }
