@@ -1095,7 +1095,7 @@ header{
     opacity: .65;
 }
 
-/* ----------------------------------------------------------- CREATING MEDIAQUERIES RESPONSIVE DESIGN  ------------------------------------------------------*/
+/* ---------------------------------------------- CREATING MEDIAQUERIES RESPONSIVE DESIGN  ------------------------------------------------------*/
 @media screen and (max-width: 970px){
     body{
         font-size: 15px;

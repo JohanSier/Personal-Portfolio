@@ -280,7 +280,7 @@ header{
     width: 48%;
     border: 3px solid #000;
     border-radius: 5px;
-    /* Add any other styles you want to apply specifically to email input */
+    flex: 1;
 }
 
 #contact-container input[name="name"]{
@@ -288,6 +288,7 @@ header{
     margin-right: 14px;
     border: 3px solid #000;
     border-radius: 5px;
+    flex: 2;
 }
 
 #contact-container input[name="subject"]{
@@ -365,4 +366,27 @@ header{
 
 #footer .footer-socials a svg:hover{
     opacity: .65;
+}
+
+
+/* ------------------------------------------ CREATING MEDIA QUERIES -------------------------------------------------------------- */
+@media screen and (max-width: 480px){
+    html{
+        font-size: 12px;
+    }
+
+    #fixed-nav{
+        margin-bottom: 32px;
+    }
+
+    #contact-container h3{
+        font-family: "Valverde", sans-serif;
+        font-size: 1.5rem;
+        color: #fff;
+    }
+    
+    #contact-container span{
+        font-style: italic;
+        text-decoration: underline;
+    }
 }
