@@ -168,7 +168,7 @@ header{
     font-size: 2.4rem;
     text-decoration: none;
     color: #454242;
-    text-wrap: nowrap;
+    white-space: nowrap;
     transition: all .3s ease;
 
 }
@@ -326,7 +326,7 @@ header{
     border: none;
     color: #fff;
     background: #1E1E1E;
-    text-wrap: nowrap;
+    white-space: nowrap;
     cursor: pointer;
     text-align: center;
     flex: 1;

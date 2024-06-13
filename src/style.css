@@ -212,7 +212,7 @@ header{
     font-size: 2.4em;
     text-decoration: none;
     color: #454242;
-    text-wrap: nowrap;
+    white-space: nowrap;
     transition: all .3s ease;
 
 }
@@ -306,7 +306,7 @@ header{
 #hero .left-hero h1{
     font-family: "Valverde", sans-serif;
     font-size: 2.8em; 
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 @keyframes greeting {
@@ -361,7 +361,7 @@ header{
     font-weight: 800;
     height: 50px;
     padding: 5px 24px;
-    text-wrap: nowrap;
+    white-space: nowrap;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -395,7 +395,7 @@ header{
     font-weight: 800;
     font-size: .9em;
     text-decoration: none;
-    text-wrap: nowrap;
+    white-space: nowrap;
     cursor: pointer;
     overflow: hidden;
     transition: width .3s ease;
@@ -506,8 +506,9 @@ header{
     justify-content: center;
     width: 100%;
     height: 75px;
-    padding-block: 12px;
-    text-wrap: nowrap;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    white-space: nowrap;
     background: var(--secondary-color);
     color: var(--white);
 }
@@ -976,7 +977,7 @@ header{
     background: #E9E9E9;
     text-transform: capitalize;
     padding-block: 3px;
-    text-wrap: nowrap;
+    white-space: nowrap;
     border-radius: 24px;
     margin-top: 8px;
 }
@@ -984,10 +985,9 @@ header{
     display: inline-block;
     font-family: "Valverde", sans-serif;
     font-size: 3.75em;
-    color: #1e1e1e;
+    color: var(--primary-color);
     margin-top: 24px;
     margin-bottom: 18px;
-    background: yellow;
 }
 .about-right p{
     font-size: 1em;
@@ -1030,7 +1030,7 @@ header{
     display: flex;
     height: 50px;
     padding: 5px 24px;
-    text-wrap: nowrap;
+    white-space: nowrap;
     justify-content: center;
     align-items: center;
     border: 2px solid #000;
@@ -1151,7 +1151,7 @@ header{
 
     #hero .left-hero h1{
         font-size: 2.7em;
-        text-wrap: wrap;
+        white-space: wrap;
     }
 
     /*Responsive Banner*/
