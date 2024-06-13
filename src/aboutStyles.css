@@ -304,8 +304,10 @@ header hr{
     margin: auto;
     margin-top: 40px;
     margin-bottom: 130px;
-    width: 76%;
-    height: 500px;
+    width: 100%;
+    padding: 0 12%;
+    height: fit-content;
+    border: 2px salmon solid;
 }
 
 .hobbies-container h3 {
@@ -322,10 +324,22 @@ header hr{
 }
 
 .hobbies_hobbie {
-    flex: 1;
     box-sizing: border-box;
     font-family: "Nunito", sans-serif;
     color: #fff;
+}
+
+.first{
+    flex: 1;
+}
+
+.second{
+    flex: 1;
+}
+
+.third{
+    flex: 1;
+
 }
 
 .hobbies_hobbie img {
@@ -377,5 +391,19 @@ header hr{
     .about-hero img{
         width: 100%;
         margin: 32px 50px;
+    }
+
+    .first{
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+    
+    .second{
+        flex: auto;
+    }
+    
+    .third{
+        flex: auto;
+    
     }
 }
