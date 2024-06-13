@@ -11,6 +11,10 @@
     src: url("../GT-America/GT-AmericaBold.otf") format("opentype");
     /* Add additional formats here if needed */
 }
+::selection {
+    background: yellow;
+    color: #1e1e1e;
+  }
 
 :root{
     --primary-color: #133CEB;
@@ -976,11 +980,13 @@ header{
     margin-top: 8px;
 }
 .about-right h4{
+    display: inline-block;
     font-family: "Valverde", sans-serif;
     font-size: 3.75em;
-    color: var(--primary-color);
+    color: #1e1e1e;
     margin-top: 24px;
     margin-bottom: 18px;
+    background: yellow;
 }
 .about-right p{
     font-size: 1em;
