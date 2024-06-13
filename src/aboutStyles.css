@@ -386,6 +386,10 @@ header hr{
 }
 
 @media screen and (max-width: 760px){
+    .about-hero p{
+        font-size: 17px;
+    }
+
     .about-hero img{
         width: 100%;
         margin: 32px 50px;
