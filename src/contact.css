@@ -250,8 +250,10 @@ header{
     position: relative;
     margin: auto;
     width: 80%;
-    height: 100vh;
+    height: fit-content;
     text-align: center;
+    border: solid slateblue;
+    margin-bottom: 0;
 }
 
 #contact-container h3{
@@ -351,7 +353,7 @@ header{
     background: #1E1E1E;
     color: var(--white);
     text-align: center;
-    margin-top: 32px;
+    margin-top: -50px;
 }
 
 .footer-socials{
@@ -370,13 +372,10 @@ header{
 
 
 /* ------------------------------------------ CREATING MEDIA QUERIES -------------------------------------------------------------- */
-@media screen and (max-width: 480px){
-    html{
-        font-size: 12px;
-    }
 
+@media screen and (max-width: 480px){
     #fixed-nav{
-        margin-bottom: 32px;
+        margin-bottom: 62px;
     }
 
     #contact-container h3{
@@ -388,5 +387,18 @@ header{
     #contact-container span{
         font-style: italic;
         text-decoration: underline;
+    }
+     /* MAKING MENU RESPONSIVE*/
+     #menu-images{
+        display: none;
+    }
+    .menu-left-content{
+        width: 100%;
+        border-radius: 35px;
+    }
+
+    .menu-left-content ul li a{
+        font-family: "Valverde", sans-serif;
+        font-size: 2em;
     }
 }
