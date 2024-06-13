@@ -998,7 +998,7 @@ header{
 #contact-footer{
     margin-top: 75px;
     width: 100%;
-    margin-left: 13%;
+    padding-left: 13%;
     margin-bottom: 60px;
 }
 
@@ -1117,16 +1117,10 @@ header{
 }
 
 @media screen and (max-width: 760px){
-    body{
-        overflow-x: hidden;
-        width: 100vw;
-        max-width: 100vw;
-    }
-
     /*Responsive Hero*/
-
     #hero{
         font-size: 16px;
+        padding-left: 12%;
     }
 
     .left-hero{
