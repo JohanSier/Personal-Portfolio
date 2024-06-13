@@ -236,6 +236,12 @@ body{
     transition: box-shadow .3s ease;
 }
 
+/* ----------------------------------------------------------- HEADER HERO ------------------------------------------------------------ */
+header{
+    width: 100%;
+    height: auto;
+}
+
 /* ----------------------------------------------------------- ABOUT HERO ------------------------------------------------------------ */
 
 .about-hero{
@@ -244,8 +250,8 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 70%;
-    margin: auto;
+    width: 100%;
+    padding: 0 50%;
     color: #fff;
     margin-top: 32px;
 }
@@ -276,8 +282,8 @@ body{
 }
 
 .about_right-p p{
-    font-weight: 600;
     font-size: .95rem;
+    font-weight: 600;
     width: 300px;
     margin-top: 24px;
 }
@@ -351,27 +357,25 @@ header hr{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-    }
-    
-/*     
-    .about_left-p span{
+        padding: 0 12%;
     }
     
     .about_left-p p{
-    } */
-    
-    .about-hero img{
-        flex-grow: 5;
-        width: 400px;
-        height: 350px;
-        margin: 0 50px;
-        border-radius: 300px;
+        width: 100%;
+    } 
+
+    .about_right-p p{
+        width: 100%;
     }
     
-    .about_right-p p{
-        font-weight: 600;
-        font-size: .95rem;
-        width: 300px;
-        margin-top: 24px;
+    .about-hero img{
+        margin: 32px 50px;
+    }
+}
+
+@media screen and (max-width: 780px){
+    .about-hero img{
+        width: 100%;
+        margin: 32px 50px;
     }
 }
