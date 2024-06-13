@@ -500,6 +500,7 @@ header{
 
 /* --------------------------------------------------- BANNER STYLING --------------------------------------------------------------*/
 #banner{
+    overflow-x: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -517,7 +518,7 @@ header{
     }
 
     50%{
-        transform: translateX(-700px);
+        transform: translateX(-50%);
     }
 
     100%{
