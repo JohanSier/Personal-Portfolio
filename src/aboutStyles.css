@@ -271,6 +271,8 @@ body{
     height: 350px;
     margin: 0 50px;
     border-radius: 300px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .about_right-p p{
@@ -282,7 +284,8 @@ body{
 
 header hr{
     margin: auto;
-    margin-block: 60px;
+    margin-top: 60px;
+    margin-bottom: 60px;
     width: 150px;
     height: 3px;
     background: #fff;
@@ -339,4 +342,36 @@ header hr{
 .hobbies_hobbie p{
     font-weight: 300;
     font-size: 1rem;
+}
+
+/* ------------------------------------------ CREATING MEDIA QUERIES -------------------------------------------------------------- */
+
+@media screen and (max-width: 1120px){
+    .about-hero{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+/*     
+    .about_left-p span{
+    }
+    
+    .about_left-p p{
+    } */
+    
+    .about-hero img{
+        flex-grow: 5;
+        width: 400px;
+        height: 350px;
+        margin: 0 50px;
+        border-radius: 300px;
+    }
+    
+    .about_right-p p{
+        font-weight: 600;
+        font-size: .95rem;
+        width: 300px;
+        margin-top: 24px;
+    }
 }
