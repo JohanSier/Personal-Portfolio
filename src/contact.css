@@ -1,15 +1,3 @@
-@font-face {
-    font-family: "Valverde", "Helvetica", sans-serif;
-    src: url("../Valverde-Font/Valverde-CondensedSemibold.otf") format("opentype");
-    /* Add additional formats here if needed */
-}
-
-@font-face {
-    font-family: "GT-America Bold";
-    src: url("../GT-America/GT-AmericaBold.otf") format("opentype");
-    /* Add additional formats here if needed */
-}
-
 body{
     box-sizing: border-box;
     background-color: var(--primary-color);
