@@ -2,20 +2,20 @@
 
 @font-face {
     font-family: "Valverde", Tahoma, sans-serif;
-    src: url('../fonts/Valverde-Font/Valverde-CondensedSemibold.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/Valverde-Font/Valverde-CondensedSemibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    src: url('../fonts/Valverde-Font/Valverde-CondensedSemibold.eot'), /* IE9 Compat Modes */ /* IE6-IE8 */
          url('../fonts/Valverde-Font/Valverde-CondensedSemibold.woff2') format('woff2'), /* Super Modern Browsers */
          url('../fonts/Valverde-Font/Valverde-CondensedSemibold.woff') format('woff'), /* Modern Browsers */
          url('../fonts/Valverde-Font/Valverde-CondensedSemibold.ttf') format('truetype'), /* Safari, Android, iOS */
          url('../fonts/Valverde-Font/Valverde-CondensedSemibold.svg#Valverde') format('svg'); /* Legacy iOS */
         font-style: normal;
+        font-weight: 600;
         font-display: swap;
     }
 
 @font-face {
     font-family: "GT-America Bold", Tahoma, sans-serif;
-    src: url('../fonts/GT-AmericaBold.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/GT-AmericaBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    src: url('../fonts/GT-AmericaBold.eot'), /* IE9 Compat Modes */
+         url('../fonts/GT-AmericaBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
          url('../fonts/GT-AmericaBold.woff2') format('woff2'), /* Super Modern Browsers */
          url('../fonts/GT-AmericaBold.woff') format('woff'), /* Modern Browsers */
          url('../fonts/GT-AmericaBold.ttf') format('truetype'), /* Safari, Android, iOS */
