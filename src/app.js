@@ -310,7 +310,7 @@ logo.addEventListener("click", (event) => {
 
 
 function setImage(link, src) {
-    link.addEventListener("mouseenter", () => {
+    link.addEventListener("mouseover", () => {
         menuImages.style.opacity = 0; // Set opacity to 0 before changing the image
         setTimeout(() => {
             menuImages.setAttribute("src", src);
