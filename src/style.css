@@ -193,9 +193,11 @@ header{
 }
 
 .menu-left-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 55%;
     background: #fff;
-    padding-top: 150px;
     padding-left: 11%;
     border-top-left-radius:35px ;
     border-bottom-left-radius:35px ;
