@@ -1,17 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
 
-/* @font-face {
-    font-family: "Valverde", Tahoma, sans-serif;
-    src: url('../fonts/Valverde-Font/Valverde-CondensedSemibold.eot'), 
-         url('../fonts/Valverde-Font/Valverde-CondensedSemibold.woff2') format('woff2'), 
-         url('../fonts/Valverde-Font/Valverde-CondensedSemibold.woff') format('woff'),
-         url('../fonts/Valverde-Font/Valverde-CondensedSemibold.ttf') format('truetype'), 
-         url('../fonts/Valverde-Font/Valverde-CondensedSemibold.svg#Valverde') format('svg'); 
-        font-style: normal;
-        font-weight: 600;
-        font-display: swap;
-    } */
-
 @font-face {
     font-family: "GT-America Bold", Tahoma, sans-serif;
     src: url('../fonts/GT-AmericaBold.eot'), /* IE9 Compat Modes */
