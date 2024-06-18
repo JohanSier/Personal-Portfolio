@@ -1156,6 +1156,16 @@ header{
         font-size: 1.4rem;
     }
 
+    /* Responsive Projects Grid */
+
+    .frontend-projects-grid .oneF {
+        grid-column: 1/6;
+    }
+    
+    .frontend-projects-grid .twoF{
+        grid-column: 1/6;
+    }
+
     /*Responsive My Skills*/
 
     .skills-heading {
