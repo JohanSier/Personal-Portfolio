@@ -70,6 +70,10 @@ body{
     gap: 8px;
 }
 
+.removeLanguagesOnMobile{
+    display: flex;
+}
+
 /* HAMBURGUER BUTTON */
 .nav_open-btn{
     z-index: 500;
@@ -420,5 +424,9 @@ span{
 @media screen and (max-width: 480px){
     span{
         display: inline;
+    }
+
+    .removeLanguagesOnMobile{
+        display: none;
     }
 }

@@ -77,6 +77,9 @@ header{
     display: flex;
     gap: 8px;
 }
+.removeLanguagesOnMobile{
+    display: flex;
+}
 
 /* HAMBURGUER BUTTON */
 .nav_open-btn{
@@ -390,5 +393,10 @@ header{
     .menu-left-content ul li a{
         font-family: "Valverde", sans-serif;
         font-size: 2em;
+    }
+
+    /* LANGUAGES SECTION RESPONSIVE */
+    .removeLanguagesOnMobile{
+        display: none;
     }
 }
