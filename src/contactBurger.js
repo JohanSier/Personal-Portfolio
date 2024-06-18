@@ -1,9 +1,12 @@
 // -------------------------------------------- CREATING FIXED NAVIGATION INTERACTION -----------------------------------------------
 const fixedNav = document.getElementById("fixed-nav")
 const heroSection = document.getElementById("contact-container")
+const languagesContainer = document.querySelector(".languages")
 
 window.addEventListener("scroll",()=>{
     fixedNav.classList.toggle("scrollEffect", window.scrollY> 10)
+    languagesContainer.classList.toggle("removeLanguagesOnMobile", window.scrollY> 10)
+
     if(window.scrollY> 10){
         heroSection.style.marginTop = "105px"
     }
