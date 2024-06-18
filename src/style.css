@@ -136,6 +136,10 @@ header{
     gap: 8px;
 }
 
+.removeLanguagesOnMobile{
+    display: flex;
+}
+
 /* HAMBURGUER BUTTON */
 .nav_open-btn{
     z-index: 500;
@@ -1315,6 +1319,11 @@ header{
 }
 
 @media screen and (max-width: 480px){
+    /* Responsive navbar languages section */
+    .removeLanguagesOnMobile{
+        display: none;
+    }
+
     /*Responsive Hero*/
     #hero .left-hero h1{
         font-size: 2em;
