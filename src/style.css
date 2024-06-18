@@ -1158,6 +1158,7 @@ header{
 
     /* Responsive Projects Grid */
 
+    /* FRONTEND GRIDS STYLES */
     .frontend-projects-grid .oneF {
         grid-column: 1/6;
     }
@@ -1166,6 +1167,44 @@ header{
         grid-column: 1/6;
     }
 
+    /* UX PROJECTS GRID STYLES */
+    .ux-projects-grid{
+        display: none;
+        margin-top: 45px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 18px;
+    }
+
+    .ux-projects-grid .one {
+        grid-column: 1/6; 
+        object-fit: cover;
+        border: .1px solid #b3b1b1;
+        object-position: 0 15%;
+    }
+    
+    .ux-projects-grid .two{
+        border: .1px solid #b3b1b1;
+        grid-column: 1/6;
+    }
+
+
+    .ux-projects-grid .three {
+        border: .1px solid #b3b1b1;
+        grid-column: 1/6; /* This makes the element span two columns */
+        object-fit: cover;
+        object-position: 0 5%;
+    }
+
+    .ux-projects-grid .four {
+        border: .1px solid #b3b1b1;
+        grid-column: 1/6; /* This makes the element span two columns */
+    }
+
+    .ux-projects-grid .five {
+        border: .1px solid #b3b1b1;
+        grid-column: 1/6; /* This makes the element span two columns */
+
+    }
     /*Responsive My Skills*/
 
     .skills-heading {
@@ -1310,5 +1349,10 @@ header{
         position: absolute;
         left: 18px;
         top: 18px;
+    }
+
+    /* RESPONSIVE UX PROJECTS GRID */
+    .ux-projects-grid .three {
+        object-position: center;
     }
 }
