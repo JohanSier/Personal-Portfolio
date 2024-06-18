@@ -240,7 +240,14 @@ header{
     color: #fff;
 }
 
+#contact-container .block{
+    display: block;
+    font-style: normal;
+    text-decoration: none;
+}
+
 #contact-container span{
+    display: inline;
     font-style: italic;
     text-decoration: underline;
 }
@@ -351,6 +358,12 @@ header{
 /* ------------------------------------------ CREATING MEDIA QUERIES -------------------------------------------------------------- */
 
 @media screen and (max-width: 480px){
+    /* RESPONSIVE CONTACT H3 */
+    #contact-container .block{
+        display: inline;
+    }
+
+    /* RESPONSIVE NAVBAR */
     #fixed-nav{
         margin-bottom: 62px;
     }
