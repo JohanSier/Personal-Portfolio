@@ -23,18 +23,6 @@ header{
     outline: none;
 }
 
-#fixed-nav.scrollEffect{
-    position: fixed;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(34,32,33, 0.9);
-    padding-right: 32px;
-    padding-left: 32px;
-    z-index: 1500;
-    transition: background 1s;
-}
-
 #logo{
     position: relative;
     cursor: pointer;
