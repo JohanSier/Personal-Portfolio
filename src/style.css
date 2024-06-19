@@ -545,7 +545,7 @@ header{
 #projects .flex-projects{
     display: flex;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
     margin-bottom: 15px;
 }
 
@@ -562,10 +562,13 @@ header{
     text-align: center;
     border-radius: 6px;
     border: 3px solid #000;
+    padding-top: 8px;
+    padding-bottom: 8px;
     /* border: 1px solid #000; */
 }
 
-.dropbtn:hover{
+.dropdown:hover{
+    font-weight: normal;
     box-shadow: 0px 5px 30px 12px rgba(0, 17, 255, 0.146);
 }
 
@@ -594,7 +597,7 @@ header{
 }
 .dropdown-content{
     display: none;
-    margin-top: 14px;
+    margin-top: 20px;
     width: 100%;
     position: absolute;
     height: 100px;
@@ -621,7 +624,9 @@ header{
     background: var(--primary-color);
     color: #fff;
 }
-.ux.default, .frontend.default{
+
+.ux.default, 
+.frontend.default{
     background: var(--primary-color);
     color: #fff;
 }
