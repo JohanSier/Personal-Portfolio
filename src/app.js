@@ -194,7 +194,8 @@ window.addEventListener("scroll",()=>{
 
         showGrid(uxGrid, frontendGrid)
     });
-    frontendBtn.addEventListener("mouseover", ()=>{
+
+    frontendBtn.addEventListener("mouseenter", ()=>{
         uxBtn.classList.remove("default")
     })
 
@@ -207,7 +208,7 @@ window.addEventListener("scroll",()=>{
         }
         showGrid(frontendGrid, uxGrid)
     });
-    uxBtn.addEventListener("mouseover", ()=>{
+    uxBtn.addEventListener("mouseenter", ()=>{
         frontendBtn.classList.remove("default")
     })
 
