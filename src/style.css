@@ -521,24 +521,20 @@ header{
 }
 
 @keyframes movingLetters {
-    0%{
+    from{
         transform: translateX(0);
     }
-
-    50%{
+    to{
         transform: translateX(-50%);
-    }
-
-    100%{
-        transform: translateX(0);
     }
 }
 
 #banner h2{
     font-family: "GT-America Bold", Tahoma, sans-serif;
     position: relative;
-    animation: movingLetters 25s linear 1s infinite;
+    animation: movingLetters 25s linear 1s infinite alternate;
 }
+
 /* ------------------------------------------ ------- RECENT PROJECTS STYLING ------------------------------------------------------*/
 #projects{
     margin: auto;
