@@ -470,25 +470,14 @@ header{
     left: 10%;
 }
 
-
-/* END OF ROUNDED LETTERS */
-
-.right-hero{
-    width: 450px;
-    height: 60vh;
-    min-height: 400px; /* Set a minimum height for the container */
-
-}
-
 .right-hero img{
     object-fit: cover;
     object-position: 40% 75%;
     width: 100%;
-    /* min-width: 400px; */
+    min-width: 120%;
     border-radius: 50px;
     box-shadow: 0px 5px 30px 12px rgba(30, 30, 30, 0.20);
-    /* border: 2px solid #000; */
-    height: 100%;
+    max-height: 420px;
 }
 
 /* --------------------------------------------------- ASIDE SOCIALS -------------------------------------------------------------*/
@@ -1118,9 +1107,14 @@ header{
 }
 
 /* ---------------------------------------------- CREATING MEDIAQUERIES RESPONSIVE DESIGN  ------------------------------------------------------*/
-@media screen and (max-width: 970px){
+@media screen and (max-width: 1000px){
     body{
         font-size: 15px;
+    }
+
+    /* Remove right-hero image */
+    #hero .right-hero{
+        display: none;
     }
 
     /*Responsive Hero*/
