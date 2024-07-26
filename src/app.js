@@ -44,6 +44,27 @@ window.addEventListener("scroll",()=>{
 })
 
 
+// --------------------------------------------------- CREATING BANNER SCROLLING INTERACTION -----------------------------------------------
+
+const banner = document.querySelector("#banner");
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', () => {
+  let scrollTop = window.scrollY || document.documentElement.scrollTop;
+  let direction = scrollTop > lastScrollTop ? -1 : 1; // Change direction to -1 for moving left on scroll down
+  
+  document.querySelectorAll("#banner h2").forEach((item, index) => {
+    let moveAmount = (scrollTop / 5) * direction;
+    item.style.transform = `translateX(${moveAmount}px)`;
+  });
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
+
+
+
+
+
 // ------------------------------------------------- CHATGPT CODE TO TOGGLE LANGUAGE -----------------------------------------------
  
     const englishLink = document.querySelector(".english");
