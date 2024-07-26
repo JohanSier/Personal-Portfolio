@@ -79,6 +79,7 @@ header{
     padding: 16px 0; /* Top and bottom padding is 18px, left and right padding is 0 */
     border-radius: 50px;
     outline: none;
+    backdrop-filter: blur(7px);
 }
 
 #fixed-nav.scrollEffect{
@@ -508,7 +509,7 @@ header{
     background: var(--secondary-color);
     color: var(--white);
 }
-
+/* 
 @keyframes movingLetters {
     from{
         transform: translateX(0);
@@ -516,12 +517,12 @@ header{
     to{
         transform: translateX(-50%);
     }
-}
+} */
 
 #banner h2{
     font-family: "GT-America Bold", Tahoma, sans-serif;
     position: relative;
-    animation:  25s linear 1s infinite reverse movingLetters;
+    /* animation:  25s linear 1s infinite reverse movingLetters; */
 }
 
 /* ------------------------------------------ ------- RECENT PROJECTS STYLING ------------------------------------------------------*/
