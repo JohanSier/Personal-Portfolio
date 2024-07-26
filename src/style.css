@@ -932,11 +932,19 @@ header{
 /* .skill-container img{
     /* width: 24px; */
     /* } */
+
     .black-bg{
         display: flex;
         background: #000;
         border-radius: 100px;
         padding: 8px;
+        transition: transform .5s ease;
+    }
+
+    .black-bg:hover{
+        transform: scale(1.2);
+        transition: transform .5s ease;
+
     }
 
 .knowledge-level{
