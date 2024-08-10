@@ -62,42 +62,6 @@ window.addEventListener('scroll', () => {
 });
 
 
-
-
-
-// ------------------------------------------------- CHATGPT CODE TO TOGGLE LANGUAGE -----------------------------------------------
- 
-    const englishLink = document.querySelector(".english");
-    const spanishLink = document.querySelector(".spanish");
-    let activeES = false;
-    let activeEN = false;
-
-    spanishLink.addEventListener("click", (e) => {
-        if (!spanishLink.classList.contains("active-language")) {
-            spanishLink.classList.add("active-language");
-            englishLink.classList.remove("active-language");
-            activeES = true;
-            activeEN = false;
-
-        }
-        console.log("Spanish:" + " " + activeES)
-        console.log("English:" + " " + activeEN)
-    });
-
-    englishLink.addEventListener("click", (e) => {
-        if (!englishLink.classList.contains("active-language")) {
-            englishLink.classList.add("active-language");
-            spanishLink.classList.remove("active-language");
-            activeES = false;
-            activeEN = true;
-        }
-        console.log("English:" + " " + activeEN)
-        console.log("Spanish:" + " " + activeES)
-    });
-
-
-
-
     /* -------------------------------------------- CREATING "HR" HOVER ANIMATION ------------------------------------------------ */
     //Getting DOM elements
 
@@ -412,6 +376,74 @@ function disableMouseEvents() {
         }, true);
     }
 }
+
+
+// ------------------------------------------------- CHATGPT CODE TO TOGGLE LANGUAGE -----------------------------------------------
+
+const translations = {
+    en: {
+      header: "Hi, I'm Johan a Frontend Developer",
+      about: "I'm a Frontend Developer with UX Design knowledge",
+      projects: "My Projects",
+      skills: "My Skills",
+      contact: "Contact Me"
+    },
+    es: {
+      header: "Hola, soy Johan un Desarrollador Frontend",
+      about: "Soy Desarrollador Frontend con conocimientos en Diseño UX",
+      projects: "Mis Proyectos",
+      skills: "Mis Habilidades",
+      contact: "Contáctame"
+    }
+  };
+  
+const appState = {
+    language: "en",
+    activeEN: true,
+    activeES: false
+};
+
+function updateLanguage(lang) {
+    appState.language = lang;
+    appState.activeEN = lang === "en";
+    appState.activeES = lang === "es";
+}
+
+function updateContent() {
+    const header = document.querySelector("header");
+    const headerText = header.querySelector("h1");
+    const about = document.querySelector(".about-text");
+    const projects = document.querySelector(".projects-text");
+    const skills = document.querySelector(".skills-text");
+    const contact = document.querySelector(".contact-text");
+
+    headerText.textContent = translations[appState.language].header;
+    about.textContent = translations[appState.language].about;
+    projects.textContent = translations[appState.language].projects;
+    skills.textContent = translations[appState.language].skills;
+    contact.textContent = translations[appState.language].contact;
+}
+
+const englishLink = document.querySelector(".english");
+const spanishLink = document.querySelector(".spanish");
+
+englishLink.addEventListener("click", (e) => {
+if (!englishLink.classList.contains("active-language")) {
+    englishLink.classList.add("active-language");
+    spanishLink.classList.remove("active-language");
+    updateLanguage("en");
+    updateContent();
+}
+});
+
+spanishLink.addEventListener("click", (e) => {
+if (!spanishLink.classList.contains("active-language")) {
+    spanishLink.classList.add("active-language");
+    englishLink.classList.remove("active-language");
+    updateLanguage("es");
+    updateContent();
+}
+});
 
 // Call the function to disable mouse events on touch devices
 disableMouseEvents();
