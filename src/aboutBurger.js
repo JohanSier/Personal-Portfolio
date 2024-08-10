@@ -101,10 +101,7 @@ spanishLink.addEventListener("click", (e) => {
         englishLink.classList.remove("active-language");
         activeES = true;
         activeEN = false;
-
     }
-    console.log("Spanish:" + " " + activeES)
-    console.log("English:" + " " + activeEN)
 });
 
 englishLink.addEventListener("click", (e) => {
@@ -114,6 +111,4 @@ englishLink.addEventListener("click", (e) => {
         activeES = false;
         activeEN = true;
     }
-    console.log("English:" + " " + activeEN)
-    console.log("Spanish:" + " " + activeES)
 });

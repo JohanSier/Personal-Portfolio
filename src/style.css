@@ -137,6 +137,18 @@ header{
     gap: 8px;
 }
 
+.english{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.spanish{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
 .removeLanguagesOnMobile{
     display: flex;
 }

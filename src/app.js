@@ -377,9 +377,6 @@ spanishLink.addEventListener("click", (e) => {
         headerText.innerHTML = "Hola, soy Johan un <br> Desarrollador Frontend 👋";
         headerParagaph.innerHTML = "Vivo en Colombia y me gusta crear productos frontend sólidos y escalables con excelentes experiencias de usuario. Además, tengo conocimientos en diseño UX, por lo que trabajar con diseñadores no es un problema"
     }
-
-    console.log("Spanish:" + " " + activeES)
-    console.log("English:" + " " + activeEN)
 });
 
 englishLink.addEventListener("click", (e) => {
@@ -391,12 +388,8 @@ englishLink.addEventListener("click", (e) => {
 
         headerText.innerHTML = "Hi, I'm Johan a Frontend <br> Developer 👋";
         headerParagaph.innerHTML = "I'm based in Colombia and I like to craft solid and scalable frontend products with great user experiences, also I got UX design knowledge so it isn't a problem working with designers"
-
-        
-
     }
-    console.log("English:" + " " + activeEN)
-    console.log("Spanish:" + " " + activeES)
+    
 });
 
 
