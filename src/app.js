@@ -422,7 +422,7 @@ spanishLink.addEventListener("click", (e) => {
         skillsLink.textContent = "Mis Habilidades"
         aboutLink.textContent = "Sobre Mí"
 
-        headerText.innerHTML = "Hola, soy Johan un <br> Desarrollador Frontend 👋";
+        headerText.innerHTML = "Hola, soy Johan un <br> Desarrollador Frontend ✌️"
         headerParagaph.innerHTML = "Vivo en Colombia y me gusta crear productos frontend sólidos y escalables con excelentes experiencias de usuario. Además, tengo conocimientos en diseño UX, por lo que trabajar con diseñadores no es un problema";
 
         mainCta.textContent = "Trabajemos Juntos";

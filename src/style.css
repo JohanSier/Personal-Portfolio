@@ -346,10 +346,6 @@ header{
     animation: none;
 }
 
-.emoji:hover{
-    animation: .5s ease-in-out infinite greeting;
-}
-
 .left-hero p{
     margin-top: 1em;
     font-family: "Nunito", sans-serif;
