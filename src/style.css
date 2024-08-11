@@ -564,13 +564,12 @@ header{
     border: 3px solid #000;
     padding-top: 8px;
     padding-bottom: 8px;
-    /* border: 1px solid #000; */
 }
 
-.dropdown:hover{
+/* .dropdown:hover{
     font-weight: normal;
     box-shadow: 0px 5px 30px 12px rgba(0, 17, 255, 0.146);
-}
+} */
 
 .dropdown .dropbtn{
     display: flex;
@@ -585,16 +584,16 @@ header{
     width: 100%;
     height: 100%;
     margin: 0;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
-
+/* 
 .dropdown .dropbtn::after {
     content: "";
     display: inline-block;
     width: 12px;
     height: 12px;
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M0.750172 0.416727H11.2502C11.3565 0.41706 11.4607 0.44638 11.5516 0.501531C11.6424 0.556681 11.7166 0.635574 11.766 0.729716C11.8153 0.823859 11.8381 0.929687 11.8318 1.03581C11.8255 1.14193 11.7904 1.24433 11.7303 1.33198L6.48025 8.91531C6.26267 9.22973 5.73884 9.22973 5.52067 8.91531L0.270672 1.33198C0.209903 1.24451 0.174267 1.14206 0.167635 1.03576C0.161003 0.929464 0.183629 0.823381 0.233055 0.729039C0.282481 0.634697 0.356816 0.555704 0.447984 0.500643C0.539152 0.445582 0.643667 0.416559 0.750172 0.416727Z" fill="%23171514"/></svg>') no-repeat center center / contain;
-}
+} */
 .dropdown-content{
     display: none;
     margin-top: 20px;

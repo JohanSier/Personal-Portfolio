@@ -144,11 +144,12 @@ window.addEventListener('scroll', () => {
     /* -------------------------------------------- CREATING DROPDOWN -------------------------------------------------------- */
     /* --------------------------------------  AND GRID HIDDEN OR NOT HIDDEN ------------------------------------------------ */
 
-    // -------- DROPDOWN Variables
+    /* // -------- DROPDOWN Variables
     dropBtn = document.querySelector(".dropbtn");
     dropDownContent = document.querySelector(".dropdown-content");
     frontendBtn = document.querySelector(".frontend")
     uxBtn = document.querySelector(".ux")
+
     // -------- GRID Variables
     const uxGrid = document.querySelector(".ux-projects-grid")
     const frontendGrid = document.querySelector(".frontend-projects-grid")
@@ -177,16 +178,14 @@ window.addEventListener('scroll', () => {
         else{
             dropBtn.textContent = "Programación"
         }
-
-
-        uxBtn.classList.remove("default")
         frontendBtn.classList.add("default")
+        uxBtn.classList.remove("default")
 
         showGrid(uxGrid, frontendGrid)
     });
 
-    frontendBtn.addEventListener("mouseenter", ()=>{
-        uxBtn.classList.remove("default")
+    uxBtn.addEventListener("mouseenter", ()=>{
+        frontendBtn.classList.add("default")
     })
 
     //Current Option
@@ -220,7 +219,7 @@ window.addEventListener('scroll', () => {
                 }
             }
         }
-    };
+    }; */
 
 /* ----------------------------------------------  CREATING BURGUER MENU LOGIC  ---------------------------------------------------- */
 // Assuming you have a button that toggles the menu with id="menu-toggle"
@@ -427,6 +426,9 @@ const footerBtn = document.querySelector(".footer_btn")
 
 const projectDev3Image = document.querySelector(".threeF")
 
+const dropBtn = document.querySelector(".dropbtn");
+
+
 spanishLink.addEventListener("click", (e) => {
     if (!spanishLink.classList.contains("active-language")) {
         spanishLink.classList.add("active-language");
@@ -455,7 +457,7 @@ spanishLink.addEventListener("click", (e) => {
         bannerText.textContent = "DISEÑADOR WEB • DESARROLLADOR FRONTEND • AUTODIDACTA • AMANTE DEL BASKET • DISEÑADOR WEB • DESARROLLADOR FRONTEND • AUTODIDACTA • AMANTE DEL BASKET • DISEÑADOR WEB • DESARROLLADOR FRONTEND • AUTODIDACTA • AMANTE DEL BASKET • DISEÑADOR WEB • DESARROLLADOR FRONTEND • AUTODIDACTA • AMANTE DEL BASKET";
         projectsTitle.textContent = "MIS PROYECTOS";
 
-        dropBtn.textContent = "Programación";
+        dropBtn.textContent = "Diseño UX";
         frontendBtn.textContent = "Programación";
         uxBtn.textContent = "Diseño UX";
 
@@ -517,7 +519,7 @@ englishLink.addEventListener("click", (e) => {
 
         projectsTitle.textContent = "RECENT PROJECTS";
 
-        dropBtn.textContent = "Frontend Dev";
+        dropBtn.textContent = "UX Design";
         frontendBtn.textContent = "Frontend Dev";
         uxBtn.textContent = "UX Design";
 
