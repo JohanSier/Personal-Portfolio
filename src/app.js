@@ -399,7 +399,14 @@ const experiencedLevel = document.querySelectorAll(".experienced")
 const intermediateLevel = document.querySelectorAll(".intermediate")
 const basicLevel = document.querySelectorAll(".basic")
 
+const aboutEyebrow = document.querySelector(".about-eyebrow")
+const aboutContainer = document.querySelector(".about-right")
+const aboutH4 = aboutContainer.querySelector("h4")
+const aboutP = aboutContainer.querySelector("p")
 
+const contactFooter = document.querySelector("#contact-footer")
+const footerH3 = contactFooter.querySelector("h3")
+const footerBtn = document.querySelector(".footer_btn")
 
 spanishLink.addEventListener("click", (e) => {
     if (!spanishLink.classList.contains("active-language")) {
@@ -440,6 +447,14 @@ spanishLink.addEventListener("click", (e) => {
         basicLevel.forEach((element) =>{
             element.textContent = "Básico"
         })
+
+
+        aboutEyebrow.textContent = "SOBRE MÍ";
+        aboutH4.textContent = "Programador y Diseñador"
+        aboutP.innerHTML = "Soy Johan, un apasionado desarrollador frontend autodidacta de Bogotá, Colombia, que te trae desarrollo y diseño web que cautiva. Actualmente estoy estudiando ingeniería de software en la Universidad Central y estoy disfrutando de este viaje :) <br><br> Además de programar y diseñar, me encanta jugar baloncesto, leer, viajar, ver películas, hacer ejercicio y, sobre todo, me encanta aprender cosas nuevas todos los días."
+
+        footerH3.innerHTML = "NECESITAS UN DESARROLLADOR WEB?<br>CONSTRUYAMOS ALGO JUNTOS!"
+        footerBtn.textContent = "CONTACTAME"
     }
 });
 
@@ -482,6 +497,13 @@ englishLink.addEventListener("click", (e) => {
         basicLevel.forEach((element) =>{
             element.textContent = "Basic"
         })
+
+        aboutEyebrow.textContent = "ABOUT ME";
+        aboutH4.textContent = "Developer and Designer"
+        aboutP.innerHTML = "I am Johan, a passionate self-taught frontend developer from Bogota, Colombia, bringing you web development and design that captivates. I'm currently studying software engineering in the Central University and I'm enjoying this journey :] <br><br> Apart from coding and design, I love playing basketball, reading, traveling, watching movies, working out, and, above all, I love learning new things every day  "
+
+        footerH3.innerHTML = "NEED A WEB DEVELOPER?<br>LET'S BUILD SOMETHING!"
+        footerBtn.textContent = "GET IN TOUCH"
     }
 
 });
