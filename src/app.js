@@ -428,6 +428,7 @@ spanishLink.addEventListener("click", (e) => {
         mainCta.textContent = "Trabajemos Juntos";
         resumeText.textContent = "Abrir CV";
         tooltip.textContent = "Hoja de Vida";
+        resumeBtn.href = "https://www.dropbox.com/scl/fi/y6njdrmaku6e00q11ii2q/Hoja-de-Vida.pdf?rlkey=ewot9pijbc1saa188fldjwklt&st=cw1lgvog&dl=0"
 
         bannerText.textContent = "DISEÑADOR WEB • DESARROLLADOR FRONTEND • AUTODIDACTA • AMANTE DEL BASKET • DISEÑADOR WEB • DESARROLLADOR FRONTEND • AUTODIDACTA • AMANTE DEL BASKET • DISEÑADOR WEB • DESARROLLADOR FRONTEND • AUTODIDACTA • AMANTE DEL BASKET • DISEÑADOR WEB • DESARROLLADOR FRONTEND • AUTODIDACTA • AMANTE DEL BASKET";
         projectsTitle.textContent = "MIS PROYECTOS";
@@ -483,6 +484,8 @@ englishLink.addEventListener("click", (e) => {
         headerParagaph.innerHTML = "I'm based in Colombia and I like to craft solid and scalable frontend products with great user experiences, also I got UX design knowledge so it isn't a problem working with designers";
         mainCta.textContent = "Let's work together";
         resumeText.textContent = "Resume";
+        resumeBtn.href = "https://www.dropbox.com/scl/fi/8sx1f80ve6qf62cl9265t/Resume.pdf?rlkey=18loofui7h2fb3xdxcnlebru4&st=1xz7u01k&dl=0"
+        
         tooltip.textContent = "Open Resume";
 
         bannerText.textContent = "FRONTEND DEVELOPER • UI DESIGNER • VISUAL DESIGNER • SELF-TAUGHT PERSON • BASKETBALL LOVER • FRONTEND DEVELOPER • UI DESIGNER • VISUAL DESIGNER • SELF-TAUGHT PERSON • BASKETBALL LOVER • UI DESIGNER • VISUAL DESIGNER • SELF-TAUGHT PERSON • BASKETBALL LOVER";
