@@ -440,7 +440,7 @@ spanishLink.addEventListener("click", (e) => {
         eyebrowText.textContent = "Mis Habilidades"
         skillsH3.textContent = "Lo Que Sé Hacer"
         devTitle.textContent = "PROGRAMACIÓN"
-        devP.textContent = "DESARROLLO FRONTEND/ DISEÑO RESPONSIVO/ HTML / CSS / JS / REACT /"
+        devP.textContent = "DESARROLLO FRONTEND/ HTML / CSS / JS / REACT /"
         desTitle.textContent = "DISEÑO"
         desP.textContent = "DISEÑADOR WEB/ UX / UI / ACCESIBILIDAD"
 
