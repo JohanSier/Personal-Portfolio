@@ -499,7 +499,7 @@ englishLink.addEventListener("click", (e) => {
         eyebrowText.textContent = "My Skills"
         skillsH3.textContent = "Things I Do"
         devTitle.textContent = "DEVELOPMENT"
-        devP.textContent = "JR FRONTEND DEV / RESPONSIVE DESIGN / HTML / CSS / JS / REACT /"
+        devP.textContent = "JR FRONTEND DEV / HTML / CSS / JS / REACT /"
         desTitle.textContent = "DESIGN"
         desP.textContent = "PRODUCT DESIGN / UX / UI / ACCESSIBILITY"
 
