@@ -29,7 +29,6 @@ const homeLink = document.querySelector(".menu_link-home")
 const projectLink = document.querySelector(".menu_link-projects");
 const skillsLink = document.querySelector(".menu_link-skills");
 const aboutLink = document.querySelector(".menu_link-about");
-const contactLink = document.querySelector(".menu_link-contact");
 
 openMenuBtn.addEventListener("click", () => {
     hiddenMenu.style.visibility = "visible";
@@ -86,7 +85,6 @@ setImage(homeLink, "./Images/base-image.avif")
 setImage(projectLink, "./Images/projects.webp");
 setImage(skillsLink, "./Images/skills.webp");
 setImage(aboutLink, "./Images/about.avif");
-setImage(contactLink, "./Images/contact.avif");
 
 
 // ---------------------------------------------- CHATGPT CODE TO TOGGLE LANGUAGE -------------------------------------------------- //

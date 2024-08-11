@@ -236,7 +236,6 @@ homeLink = document.querySelector(".menu_link-home");
 projectLink = document.querySelector(".menu_link-projects");
 skillsLink = document.querySelector(".menu_link-skills");
 aboutLink = document.querySelector(".menu_link-about");
-contactLink = document.querySelector(".menu_link-contact");
 
 openMenuBtn.addEventListener("click", () => {
     hiddenMenu.style.visibility = "visible";
@@ -323,7 +322,6 @@ setImage(homeLink, "./Images/base-image.avif")
 setImage(projectLink, "./Images/projects.webp");
 setImage(skillsLink, "./Images/skills.webp");
 setImage(aboutLink, "./Images/about.avif");
-setImage(contactLink, "./Images/contact.avif");
 
 /* ---------------------------------------------  CREATING RESUME BUTTON LOGIC  ---------------------------------------------------- */
 
@@ -423,7 +421,6 @@ spanishLink.addEventListener("click", (e) => {
         projectLink.textContent = "Proyectos"
         skillsLink.textContent = "Mis Habilidades"
         aboutLink.textContent = "Sobre Mí"
-        contactLink.textContent = "Contactame"
 
         headerText.innerHTML = "Hola, soy Johan un <br> Desarrollador Frontend 👋";
         headerParagaph.innerHTML = "Vivo en Colombia y me gusta crear productos frontend sólidos y escalables con excelentes experiencias de usuario. Además, tengo conocimientos en diseño UX, por lo que trabajar con diseñadores no es un problema";
@@ -481,7 +478,6 @@ englishLink.addEventListener("click", (e) => {
         projectLink.textContent = "Projects"
         skillsLink.textContent = "My Skills"
         aboutLink.textContent = "More About Me"
-        contactLink.textContent = "Contact Me"
 
         headerText.innerHTML = "Hi, I'm Johan a Frontend <br> Developer 👋";
         headerParagaph.innerHTML = "I'm based in Colombia and I like to craft solid and scalable frontend products with great user experiences, also I got UX design knowledge so it isn't a problem working with designers";
