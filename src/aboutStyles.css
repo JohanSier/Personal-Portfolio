@@ -410,6 +410,11 @@ span{
 }
 
 @media screen and (max-width: 480px){
+    /* RESPONSIVE LOGO */
+    #logo img{
+        width: 110px;
+    }
+
     span{
         display: inline;
     }

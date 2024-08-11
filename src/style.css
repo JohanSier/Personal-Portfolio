@@ -1346,6 +1346,11 @@ header{
 }
 
 @media screen and (max-width: 480px){
+    /* RESPONSIVE LOGO */
+    #logo img{
+        width: 110px;
+    }
+
     /* Responsive navbar languages section */
     .removeLanguagesOnMobile{
         display: none;
@@ -1353,7 +1358,7 @@ header{
 
     /*Responsive Hero*/
     #hero .left-hero h1{
-        font-size: 2em;
+        font-size: 1.7em;
         width: 300px;
     }
 
