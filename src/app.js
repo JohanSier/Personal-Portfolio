@@ -171,7 +171,7 @@ window.addEventListener('scroll', () => {
     //Current Option
     frontendBtn.addEventListener("click", () => {
         if (!spanishLink.classList.contains("active-language")) {
-            dropBtn.textContent = "Diseño UX"
+            dropBtn.textContent = "Frontend Dev"
 
         }
         else{
