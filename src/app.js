@@ -364,6 +364,23 @@ mainCta.addEventListener("click", ()=>{
 })
 });
 
+// ------------------------------------------------- FUNCTIONALITY TO CHANGE PROJECT-DEV-2 IMAGE ON SCREENS FEWER THAN 1310PEXELS ---------------
+
+function checkScreenWidth() {
+  projectDevImage = document.querySelector('.twoF');
+  if (window.innerWidth < 1310) {
+    projectDevImage.src = './Images/projectDevMobile-2.avif';
+  } else {
+    projectDevImage.src = './Images/projectDev-2.avif';
+  }
+}
+
+// Check screen width on load
+checkScreenWidth();
+
+// Check screen width on resize
+window.addEventListener('resize', checkScreenWidth);
+
 // ------------------------------------------------- CHATGPT CODE TO TOGGLE LANGUAGE -----------------------------------------------
  
 const englishLink = document.querySelector(".english");
@@ -408,6 +425,8 @@ const contactFooter = document.querySelector("#contact-footer")
 const footerH3 = contactFooter.querySelector("h3")
 const footerBtn = document.querySelector(".footer_btn")
 
+const projectDev3Image = document.querySelector(".threeF")
+
 spanishLink.addEventListener("click", (e) => {
     if (!spanishLink.classList.contains("active-language")) {
         spanishLink.classList.add("active-language");
@@ -429,6 +448,9 @@ spanishLink.addEventListener("click", (e) => {
         resumeText.textContent = "Abrir CV";
         tooltip.textContent = "Hoja de Vida";
         resumeBtn.href = "https://www.dropbox.com/scl/fi/y6njdrmaku6e00q11ii2q/Hoja-de-Vida.pdf?rlkey=ewot9pijbc1saa188fldjwklt&st=cw1lgvog&dl=0"
+
+        projectDevImage.src = './Images/projectDevEs-2.avif';
+        projectDev3Image.src = "./Images/projectDevEs-3.avif"
 
         bannerText.textContent = "DISEÑADOR WEB • DESARROLLADOR FRONTEND • AUTODIDACTA • AMANTE DEL BASKET • DISEÑADOR WEB • DESARROLLADOR FRONTEND • AUTODIDACTA • AMANTE DEL BASKET • DISEÑADOR WEB • DESARROLLADOR FRONTEND • AUTODIDACTA • AMANTE DEL BASKET • DISEÑADOR WEB • DESARROLLADOR FRONTEND • AUTODIDACTA • AMANTE DEL BASKET";
         projectsTitle.textContent = "MIS PROYECTOS";
@@ -485,6 +507,9 @@ englishLink.addEventListener("click", (e) => {
         mainCta.textContent = "Let's work together";
         resumeText.textContent = "Resume";
         resumeBtn.href = "https://www.dropbox.com/scl/fi/8sx1f80ve6qf62cl9265t/Resume.pdf?rlkey=18loofui7h2fb3xdxcnlebru4&st=1xz7u01k&dl=0"
+
+        projectDevImage.src = './Images/projectDev-2.avif';
+        projectDev3Image.src = './Images/projectDev-3.avif';
         
         tooltip.textContent = "Open Resume";
 
