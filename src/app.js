@@ -374,6 +374,8 @@ let activeES = false;
 let activeEN = false;
 
 // -------------------------------------------------- ELEMENTS TO CHANGE ITS LANGUAGE
+const title = document.querySelector("title")
+
 const header = document.querySelector("header");
 const headerText = header.querySelector("h1");
 const headerParagaph = header.querySelector("p");
@@ -414,6 +416,8 @@ spanishLink.addEventListener("click", (e) => {
         englishLink.classList.remove("active-language");
         activeES = true;
         activeEN = false;
+
+        title.textContent = "Johan Sierra | Desarrollador Frontend"
 
         headerText.innerHTML = "Hola, soy Johan un <br> Desarrollador Frontend 👋";
         headerParagaph.innerHTML = "Vivo en Colombia y me gusta crear productos frontend sólidos y escalables con excelentes experiencias de usuario. Además, tengo conocimientos en diseño UX, por lo que trabajar con diseñadores no es un problema";
@@ -464,6 +468,8 @@ englishLink.addEventListener("click", (e) => {
         spanishLink.classList.remove("active-language");
         activeES = false;
         activeEN = true;
+
+        title.textContent = "Johan Sierra | Frontend Developer"
 
         headerText.innerHTML = "Hi, I'm Johan a Frontend <br> Developer 👋";
         headerParagaph.innerHTML = "I'm based in Colombia and I like to craft solid and scalable frontend products with great user experiences, also I got UX design knowledge so it isn't a problem working with designers";
