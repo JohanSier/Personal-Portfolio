@@ -129,7 +129,6 @@ window.addEventListener('scroll', () => {
     /* -------------------------------------------- CREATING SMOOTH SCROLLING EFFECT ------------------------------------------------ */
     const observer = new IntersectionObserver((entries) =>{
         entries.forEach((entry) => {
-            console.log(entry)
             if(entry.isIntersecting){
                 entry.target.classList.add("show")
             } else{
@@ -146,10 +145,10 @@ window.addEventListener('scroll', () => {
     /* --------------------------------------  AND GRID HIDDEN OR NOT HIDDEN ------------------------------------------------ */
 
     // -------- DROPDOWN Variables
-    const dropBtn = document.querySelector(".dropbtn");
-    const dropDownContent = document.querySelector(".dropdown-content");
-    const frontendBtn = document.querySelector(".frontend")
-    const uxBtn = document.querySelector(".ux")
+    dropBtn = document.querySelector(".dropbtn");
+    dropDownContent = document.querySelector(".dropdown-content");
+    frontendBtn = document.querySelector(".frontend")
+    uxBtn = document.querySelector(".ux")
     // -------- GRID Variables
     const uxGrid = document.querySelector(".ux-projects-grid")
     const frontendGrid = document.querySelector(".frontend-projects-grid")
@@ -171,7 +170,14 @@ window.addEventListener('scroll', () => {
 
     //Current Option
     frontendBtn.addEventListener("click", () => {
-        dropBtn.textContent = "Frontend Dev"
+        if (!spanishLink.classList.contains("active-language")) {
+            dropBtn.textContent = "Diseño UX"
+
+        }
+        else{
+            dropBtn.textContent = "Programación"
+        }
+
 
         uxBtn.classList.remove("default")
         frontendBtn.classList.add("default")
@@ -185,7 +191,13 @@ window.addEventListener('scroll', () => {
 
     //Current Option
     uxBtn.addEventListener("click", () => {
-        dropBtn.textContent = "UX Design"
+        if (!spanishLink.classList.contains("active-language")) {
+            dropBtn.textContent = "UX Design"
+        }
+        else{
+            dropBtn.textContent = "Diseño UX"
+        }
+
         if(!frontendBtn.classList.contains("default")){
             frontendBtn.classList.remove("default")
             uxBtn.classList.add("default")
@@ -315,8 +327,8 @@ setImage(contactLink, "./Images/contact.avif");
 
 /* ---------------------------------------------  CREATING RESUME BUTTON LOGIC  ---------------------------------------------------- */
 
-const resumeBtn = document.querySelector(".resume-btn")
-const resumeText = document.querySelector(".resume-text")
+resumeBtn = document.querySelector(".resume-btn")
+resumeText = document.querySelector(".resume-text")
 const resumeSvg = document.querySelector(".resume-svg")
 
 function showResumeText(element){
@@ -342,7 +354,7 @@ hideResumeText(resumeBtn)
 
 
 //SCROLL EFFECT FOR THE MAIN CTA
-const mainCta = document.querySelector(".main-cta")
+mainCta = document.querySelector(".main-cta")
 const footerBtn = document.querySelector(".footer_btn")
 
 mainCta.addEventListener("click", ()=>{
@@ -366,6 +378,28 @@ const header = document.querySelector("header");
 const headerText = header.querySelector("h1");
 const headerParagaph = header.querySelector("p");
 
+tooltip = document.querySelector(".tooltiptext")
+
+const bannerText = banner.querySelector("h2");
+
+const flexProjects = document.querySelector(".flex-projects")
+const projectsTitle = flexProjects.querySelector("h3")
+
+const eyebrowText = document.querySelector(".eyebrow-text")
+const skillsHeading = document.querySelector(".skills-heading")
+const skillsH3 = skillsHeading.querySelector("h3")
+
+const devTitle = document.querySelector(".dev-title")
+const devP = document.querySelector(".dev-p")
+
+const desTitle = document.querySelector(".des-title")
+const desP = document.querySelector(".des-p")
+
+const experiencedLevel = document.querySelectorAll(".experienced")
+const intermediateLevel = document.querySelectorAll(".intermediate")
+const basicLevel = document.querySelectorAll(".basic")
+
+
 
 spanishLink.addEventListener("click", (e) => {
     if (!spanishLink.classList.contains("active-language")) {
@@ -375,7 +409,37 @@ spanishLink.addEventListener("click", (e) => {
         activeEN = false;
 
         headerText.innerHTML = "Hola, soy Johan un <br> Desarrollador Frontend 👋";
-        headerParagaph.innerHTML = "Vivo en Colombia y me gusta crear productos frontend sólidos y escalables con excelentes experiencias de usuario. Además, tengo conocimientos en diseño UX, por lo que trabajar con diseñadores no es un problema"
+        headerParagaph.innerHTML = "Vivo en Colombia y me gusta crear productos frontend sólidos y escalables con excelentes experiencias de usuario. Además, tengo conocimientos en diseño UX, por lo que trabajar con diseñadores no es un problema";
+
+        mainCta.textContent = "Trabajemos Juntos";
+        resumeText.textContent = "Abrir CV";
+        tooltip.textContent = "Hoja de Vida";
+
+        bannerText.textContent = "DISEÑADOR WEB • DESARROLLADOR FRONTEND • AUTODIDACTA • AMANTE DEL BASKET • DISEÑADOR WEB • DESARROLLADOR FRONTEND • AUTODIDACTA • AMANTE DEL BASKET • DISEÑADOR WEB • DESARROLLADOR FRONTEND • AUTODIDACTA • AMANTE DEL BASKET • DISEÑADOR WEB • DESARROLLADOR FRONTEND • AUTODIDACTA • AMANTE DEL BASKET";
+        projectsTitle.textContent = "MIS PROYECTOS";
+
+        dropBtn.textContent = "Programación";
+        frontendBtn.textContent = "Programación";
+        uxBtn.textContent = "Diseño UX";
+
+        eyebrowText.textContent = "Mis Habilidades"
+        skillsH3.textContent = "Lo Que Sé Hacer"
+        devTitle.textContent = "PROGRAMACIÓN"
+        devP.textContent = "DESARROLLO FRONTEND/ DISEÑO RESPONSIVO/ HTML / CSS / JS / REACT /"
+        desTitle.textContent = "DISEÑO"
+        desP.textContent = "DISEÑADOR WEB/ UX / UI / ACCESIBILIDAD"
+
+        experiencedLevel.forEach((element) =>{
+            element.textContent = "Experimentado"
+        })
+
+        intermediateLevel.forEach((element) =>{
+            element.textContent = "Intermedio"
+        })
+
+        basicLevel.forEach((element) =>{
+            element.textContent = "Básico"
+        })
     }
 });
 
@@ -387,9 +451,39 @@ englishLink.addEventListener("click", (e) => {
         activeEN = true;
 
         headerText.innerHTML = "Hi, I'm Johan a Frontend <br> Developer 👋";
-        headerParagaph.innerHTML = "I'm based in Colombia and I like to craft solid and scalable frontend products with great user experiences, also I got UX design knowledge so it isn't a problem working with designers"
+        headerParagaph.innerHTML = "I'm based in Colombia and I like to craft solid and scalable frontend products with great user experiences, also I got UX design knowledge so it isn't a problem working with designers";
+        mainCta.textContent = "Let's work together";
+        resumeText.textContent = "Resume";
+        tooltip.textContent = "Open Resume";
+
+        bannerText.textContent = "FRONTEND DEVELOPER • UI DESIGNER • VISUAL DESIGNER • SELF-TAUGHT PERSON • BASKETBALL LOVER • FRONTEND DEVELOPER • UI DESIGNER • VISUAL DESIGNER • SELF-TAUGHT PERSON • BASKETBALL LOVER • UI DESIGNER • VISUAL DESIGNER • SELF-TAUGHT PERSON • BASKETBALL LOVER";
+
+        projectsTitle.textContent = "RECENT PROJECTS";
+
+        dropBtn.textContent = "Frontend Dev";
+        frontendBtn.textContent = "Frontend Dev";
+        uxBtn.textContent = "UX Design";
+
+        eyebrowText.textContent = "My Skills"
+        skillsH3.textContent = "Things I Do"
+        devTitle.textContent = "DEVELOPMENT"
+        devP.textContent = "JR FRONTEND DEV / RESPONSIVE DESIGN / HTML / CSS / JS / REACT /"
+        desTitle.textContent = "DESIGN"
+        desP.textContent = "PRODUCT DESIGN / UX / UI / ACCESSIBILITY"
+
+        experiencedLevel.forEach((element) =>{
+            element.textContent = "Experienced"
+        })
+
+        intermediateLevel.forEach((element) =>{
+            element.textContent = "Intermediate"
+        })
+
+        basicLevel.forEach((element) =>{
+            element.textContent = "Basic"
+        })
     }
-    
+
 });
 
 

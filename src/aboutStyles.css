@@ -258,7 +258,7 @@ header{
     margin: 0 50px;
     border-radius: 300px;
     object-fit: cover;
-    object-position: center;
+    object-position: 15% center;
 }
 
 .about_right-p p{

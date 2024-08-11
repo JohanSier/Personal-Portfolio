@@ -135,6 +135,7 @@ header{
 .languages{
     display: flex;
     gap: 8px;
+    font-weight: 300;
 }
 
 .english{
@@ -440,10 +441,7 @@ header{
     transition: visibility .3s ease;
     z-index: 100;
 }
-/* Show the tooltip text when you mouse over the tooltip container */
-/* .resume-btn:hover .tooltiptext {
-  visibility: visible;
-} */
+
 /* Tooltip container */
 .tooltip-container {
     font-family: "GT-America Bold", Tahoma, sans-serif;
@@ -469,6 +467,7 @@ header{
 
 /* Tooltip text */
 .tooltiptext {
+    font-family: "Nunito", sans-serif;
     visibility: hidden;
     width: 120px;
     background-color: rgba(0, 0, 0, 0.718);
@@ -476,9 +475,10 @@ header{
     text-align: center;
     padding: 5px 0;
     border-radius: 6px;
+
     /* Position the tooltip text */
     position: absolute;
-    top: -125px;
+    top: -135px;
     transform: translateY(600%);
     left: 10%;
 }
