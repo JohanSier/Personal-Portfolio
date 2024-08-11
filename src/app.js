@@ -458,8 +458,8 @@ spanishLink.addEventListener("click", (e) => {
         projectsTitle.textContent = "MIS PROYECTOS";
 
         dropBtn.textContent = "Diseño UX";
-        frontendBtn.textContent = "Programación";
-        uxBtn.textContent = "Diseño UX";
+        // frontendBtn.textContent = "Programación";
+        // uxBtn.textContent = "Diseño UX";
 
         eyebrowText.textContent = "Mis Habilidades"
         skillsH3.textContent = "Lo Que Sé Hacer"
@@ -520,8 +520,8 @@ englishLink.addEventListener("click", (e) => {
         projectsTitle.textContent = "RECENT PROJECTS";
 
         dropBtn.textContent = "UX Design";
-        frontendBtn.textContent = "Frontend Dev";
-        uxBtn.textContent = "UX Design";
+        // frontendBtn.textContent = "Frontend Dev";
+        // uxBtn.textContent = "UX Design";
 
         eyebrowText.textContent = "My Skills"
         skillsH3.textContent = "Things I Do"
