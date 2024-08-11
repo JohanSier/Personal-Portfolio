@@ -232,11 +232,11 @@ const menuImages = document.getElementById("menu-images");
 
 const logo = document.getElementById("logo")
 
-const homeLink = document.querySelector(".menu_link-home");
-const projectLink = document.querySelector(".menu_link-projects");
-const skillsLink = document.querySelector(".menu_link-skills");
-const aboutLink = document.querySelector(".menu_link-about");
-const contactLink = document.querySelector(".menu_link-contact");
+homeLink = document.querySelector(".menu_link-home");
+projectLink = document.querySelector(".menu_link-projects");
+skillsLink = document.querySelector(".menu_link-skills");
+aboutLink = document.querySelector(".menu_link-about");
+contactLink = document.querySelector(".menu_link-contact");
 
 openMenuBtn.addEventListener("click", () => {
     hiddenMenu.style.visibility = "visible";
@@ -419,6 +419,12 @@ spanishLink.addEventListener("click", (e) => {
 
         title.textContent = "Johan Sierra | Desarrollador Frontend"
 
+        homeLink.textContent = "Inicio"
+        projectLink.textContent = "Proyectos"
+        skillsLink.textContent = "Mis Habilidades"
+        aboutLink.textContent = "Sobre Mí"
+        contactLink.textContent = "Contactame"
+
         headerText.innerHTML = "Hola, soy Johan un <br> Desarrollador Frontend 👋";
         headerParagaph.innerHTML = "Vivo en Colombia y me gusta crear productos frontend sólidos y escalables con excelentes experiencias de usuario. Además, tengo conocimientos en diseño UX, por lo que trabajar con diseñadores no es un problema";
 
@@ -470,6 +476,12 @@ englishLink.addEventListener("click", (e) => {
         activeEN = true;
 
         title.textContent = "Johan Sierra | Frontend Developer"
+
+        homeLink.textContent = "Home"
+        projectLink.textContent = "Projects"
+        skillsLink.textContent = "My Skills"
+        aboutLink.textContent = "More About Me"
+        contactLink.textContent = "Contact Me"
 
         headerText.innerHTML = "Hi, I'm Johan a Frontend <br> Developer 👋";
         headerParagaph.innerHTML = "I'm based in Colombia and I like to craft solid and scalable frontend products with great user experiences, also I got UX design knowledge so it isn't a problem working with designers";
