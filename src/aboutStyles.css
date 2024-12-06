@@ -253,12 +253,11 @@ header{
 
 .about-hero img{
     flex-grow: 5;
-    width: 400px;
-    height: 350px;
+    width: 500px;
+    height: 380px;
     margin: 0 50px;
     border-radius: 300px;
     object-fit: cover;
-    object-position: 15% center;
 }
 
 .about_right-p p{

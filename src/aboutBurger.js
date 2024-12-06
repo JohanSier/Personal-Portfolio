@@ -164,11 +164,11 @@ englishLink.addEventListener("click", (e) => {
         thirdP.textContent = "I'm based in Bogota, Colombia and when it comes to frontend development, I'm completely self-taught with a boost from online courses, including ones from The Odin Project, Google and IBM.  Learning isn't just a checkbox for me; it's a passion. Every day is a chance to soak up new knowledge because, well, I absolutely love it."
         fourthP.textContent = "Let's make this journey together, where every code line tells a story, and every user interface is a canvas for awesomeness. Excited to connect and create some magic!"
 
-        hobbiesH3.innerHTML = "What I love beyond the code <span>& design</span>"
+        hobbiesH3.innerHTML = "What I love beyond code <span>& design</span>"
         firstHobbieH4.textContent = "Playing Basketball"
         firstHobbieP.textContent = "Recently playing basketball has become one of the most frequent things that I do along with my friends and I enjoy it a lot!"
 
-        secondHobbieH4.textContent = "Leer Cosas Interesantes"
+        secondHobbieH4.textContent = "Reading Cool Things"
         secondHobbieP.textContent = "With over 40 books, I can say that reading is my main resource for exploring new worlds and learning anything. It’s an activity that fuels my creativity and motivates me to create new things."
 
         thirdHobbieH4.textContent = "Learning New Things"

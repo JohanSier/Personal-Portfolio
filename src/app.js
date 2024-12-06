@@ -313,14 +313,14 @@ function setImage(link, src) {
         setTimeout(() => {
             menuImages.setAttribute("src", src);
             menuImages.style.opacity = 1; // Fade in by setting opacity to 1
-        }, 300); // Adjust the duration (in milliseconds) based on your preference
+        }, 130); // Adjust the duration (in milliseconds) based on your preference
     });
 }
 
 setImage(homeLink, "./Images/base-image.avif")
-setImage(projectLink, "./Images/projects.webp");
+setImage(projectLink, "./Images/projectDev-1.avif");
 setImage(skillsLink, "./Images/skills.webp");
-setImage(aboutLink, "./Images/about.avif");
+setImage(aboutLink, "./Images/mom.avif");
 
 /* ---------------------------------------------  CREATING RESUME BUTTON LOGIC  ---------------------------------------------------- */
 
