@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /admin/  # Example: Disallow crawling of the admin directory
+Sitemap: https://johansieco.netlify.app/sitemap.xml
