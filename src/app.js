@@ -1,29 +1,29 @@
 document.addEventListener("DOMContentLoaded", function() {
     // CURSOR ANIMATION
-    const cursorElement = document.getElementById("cursor");
-    const uxProjectsBoxes = document.querySelectorAll(".box");
-    const frontendProjectBoxes = document.querySelectorAll(".boxF");
+    // const cursorElement = document.getElementById("cursor");
+    // const uxProjectsBoxes = document.querySelectorAll(".box");
+    // const frontendProjectBoxes = document.querySelectorAll(".boxF");
 
-    function enableCursorAnimation(projectType) {
-        projectType.forEach((box) => {
-            box.addEventListener("mousemove", (e) => {
-                let x = e.pageX;
-                let y = e.pageY;
+    // function enableCursorAnimation(projectType) {
+    //     projectType.forEach((box) => {
+    //         box.addEventListener("mousemove", (e) => {
+    //             let x = e.pageX;
+    //             let y = e.pageY;
 
-                box.style.cursor = "none";
-                cursorElement.style.display = "block";
-                cursorElement.style.top = y + "px";
-                cursorElement.style.left = x + "px";
-        });
+    //             box.style.cursor = "none";
+    //             cursorElement.style.display = "block";
+    //             cursorElement.style.top = y + "px";
+    //             cursorElement.style.left = x + "px";
+    //     });
 
-            box.addEventListener("mouseout", () => {
-                    cursorElement.style.display = "none";
-            });
-        });
-    }
+    //         box.addEventListener("mouseout", () => {
+    //                 cursorElement.style.display = "pointer";
+    //         });
+    //     });
+    // }
 
-        enableCursorAnimation(uxProjectsBoxes);
-        enableCursorAnimation(frontendProjectBoxes);
+    //     enableCursorAnimation(uxProjectsBoxes);
+    //     enableCursorAnimation(frontendProjectBoxes);
 
 // -------------------------------------------- CREATING FIXED NAVIGATION INTERACTION -----------------------------------------------
 
